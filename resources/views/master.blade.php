@@ -23,7 +23,7 @@
  
                   <tbody>
                     <tr>
-                      <td>Tiger Nixon</td>
+                      <td>Tyler Nixon</td>
                       <td>System Architect</td>
                       <td>Edinburgh</td>
                       <td>61</td>

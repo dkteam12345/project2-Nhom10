@@ -6,7 +6,7 @@
       <div CLASS="sidebar-brand-icon rotate-n-15">
         <i CLASS="fas fa-laugh-wink"></i>
       </div>
-      <div CLASS="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+      <div CLASS="sidebar-brand-text mx-3">Quản lí Thiết bị</div>
     </a>
    
     <!-- Divider -->
@@ -21,14 +21,14 @@
     <li CLASS="nav-item">
       <a CLASS="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
         <i CLASS="fas fa-fw fa-cog"></i>
-        <span>Components</span>
+        <span>Thiết bị</span>
       </a>
       <div id="collapseTwo" CLASS="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-        <div CLASS="bg-white py-2 collapse-inner rounded">
+        {{-- <div CLASS="bg-white py-2 collapse-inner rounded">
           <h6 CLASS="collapse-header">Custom Components:</h6>
           <a CLASS="collapse-item" href="#">Buttons</a>
           <a CLASS="collapse-item" href="#">Cards</a>
-        </div>
+        </div> --}}
       </div>
     </li>
    
