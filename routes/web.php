@@ -19,7 +19,7 @@ Route::get('/',[ToolController::class,'index']);
 route::get('/create',function(){
     return view('create');
 });
-route::post('/create',[ToolController::class,'createcontact']);
+Route::post('/create',[ToolController::class,'createcontact']);
 route::get('/delete/{id}',[ToolController::class,'deletecontact']);
 route::get('/edit/{id}',[ToolController::class,'editcontact']);
 route::post('/edit/{id}',[ToolController::class,'updatecontact']);
