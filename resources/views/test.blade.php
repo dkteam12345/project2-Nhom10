@@ -10,7 +10,7 @@
 </head>
 <body>
     <a href="{{url('/create')}}">Thêm liên hệ</a>
-    <table style="border-block-width: ">
+    <table CLASS="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <tr>
             <td>Name</td>
             <td>Address</td>
