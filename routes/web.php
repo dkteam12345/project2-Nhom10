@@ -24,4 +24,12 @@ route::get('/delete/{id}',[ToolController::class,'deletecontact']);
 route::get('/edit/{id}',[ToolController::class,'editcontact']);
 route::post('/edit/{id}',[ToolController::class,'updatecontact']);
 
-    
+route::get('/thietbi',[ToolController::class,'thietbi']);
+route::get('/createthietbi',function(){
+    return view('createthietbi');
+});
+route::post('/createthietbi',[ToolController::class,'createthietbi']);
+route::get('/deletethietbi/{id}',[ToolController::class,'deletethietbi']);
+route::get('updatethietbi/{id}',[ToolController::class,'editthietbi']);
+route::post('/updatethietbi/{id}',[ToolController::class,'updatethietbi']);
+

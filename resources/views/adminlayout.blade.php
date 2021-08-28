@@ -88,7 +88,12 @@
                     </div>
                 </div> --}}
             </li>
-
+            <li>
+                <a class="nav-link collapsed" href="{{url('/thietbi')}}" >
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Thiết bị</span>
+                </a>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
 

@@ -87,43 +87,49 @@ class ToolController extends Controller
     //     $loaithietbi = ToolModel::getAllloaithietbi();
     //     return view('test',['loaithietbi'=>$loaithietbi]);
     // }
-
-    function createloaithietbi(Request $request){
+        function thietbi(){
+            $thietbi = ToolModel::getAllthietbi();
+            return view('thietbi',['thietbi'=>$thietbi]);
+        }
+    function createthietbi(Request $request){
         $loai = $request -> input('loai');
         $ten = $request -> input('ten');
         $ghichu = $request -> input('ghichu');
-        $rs = ToolModel::createloaithietbi($loai,$ten,$ghichu);
+        $rs = ToolModel::createthietbi($loai,$ten,$ghichu);
         if($rs == 0){
-
-        }
-        else{
-            return redirect('/');
-        }
-    }
-    function deleteloaithietbi($id){
-        $rs = ToolModel::deleteid($id);
-        if ($rs == 0){
+            
             return "fail";
         }
         else{
-            return redirect('/');
+            return redirect('/thietbi');
         }
     }
-    function editloaithietbi($id){
-        $loaithietbi = ToolModel::getloaithietbi($id);
-        return view('update',['contact'=>$loaithietbi]);
+    function deletethietbi($id){
+        $rs = ToolModel::deletethietbi($id);
+        if ($rs == 0){
+           
+            return "fail";
+        }
+        else{
+           
+            return redirect('/thietbi');
+        }
     }
-    function updateloaithietbi(Request $request,$id){
+    function editthietbi($id){
+        $thietbi = ToolModel::getthietbi($id);
+        return view('updatethietbi',['thietbi'=>$thietbi]);
+    }
+    function updatethietbi(Request $request,$id){
         $loai = $request -> input('loai');
         $ten = $request -> input('ten');
         $ghichu = $request -> input('ghichu');
-        $rs = ToolModel::updateloaithietbi($id,$loai,$ten,$ghichu);
+        $rs = ToolModel::updatethietbi($id,$loai,$ten,$ghichu);
         if ($rs == 0){
             return "fail";
 
         }
         else{
-            return redirect('/');
+            return redirect('/thietbi');
         }
     }
 

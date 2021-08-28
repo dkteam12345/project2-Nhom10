@@ -1,4 +1,4 @@
-@EXTENDS('layout.main')
+@EXTENDS('adminlayout')
 @section('content')
 <!DOCTYPE html>
 <html lang="en">
@@ -9,13 +9,13 @@
     <title>Document</title>
 </head>
 <body>
-    @if($contact != NULL)
+    @if($thietbi != NULL)
     <form method="POST">
         @csrf
         
-        <input value="{{$contact->loai}}" type="text" name="loai" placeholder="Nhập loại">
-        <input value="{{$contact->ten}}" type="text" name="ten" placeholder="Nhập tên">
-        <input value="{{$contact->ghichu}" type="text" name="ghichu" placeholder="Ghi chú">
+        <input value="{{$thietbi->loai}}" type="text" name="loai" placeholder="Nhập loại">
+        <input value="{{$thietbi->ten}}" type="text" name="ten" placeholder="Nhập tên">
+        <input value="{{$thietbi->ghichu}" type="text" name="ghichu" placeholder="Ghi chú">
         <button type="submit">Cập nhật</button>
     @else 
         <h1>Ko có dữ liệu</h1>

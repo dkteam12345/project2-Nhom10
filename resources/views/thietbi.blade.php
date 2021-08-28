@@ -9,23 +9,23 @@
     <title>Loại thiết bị</title>
 </head>
 <body>
-    <a href="{{url('/create')}}">Thêm loại thiết bị</a>
+    <a href="{{url('/createthietbi')}}">Thêm loại thiết bị</a>
     <table CLASS="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <tr>
-            <td>ID</td>
+            
             <td>Loại</td>
             <td>Tên</td>
             <td>Ghi chú</td>
             <td colspan="2">Action</td>
         </tr>
-        @forelse ($contacts as $contact)
+        @forelse ($thietbi as $item)
         <tr>
-            <td>{{$contact->ID}}</td>
-            <td>{{$contact->loai}}</td>
-            <td>{{$contact->ten}}</td>
-            <td>{{$contact->ghichu}}</td>
-            <td><a href="{{url('/edit/'.$contact->ID_loai)}}">Sửa</a></td>
-            <td><a href="{{url('/delete/'.$contact->ID_loai)}}">Xoá</a></td>
+            
+            <td>{{$item->loai}}</td>
+            <td>{{$item->ten}}</td>
+            <td>{{$item->ghichu}}</td>
+            <td><a href="{{url('/updatethietbi/'.$item->ID_loai)}}">Sửa</a></td>
+            <td><a href="{{url('/deletethietbi/'.$item->ID_loai)}}">Xoá</a></td>
         </tr>
         @empty
         <tr>

@@ -1,4 +1,4 @@
-@EXTENDS('layout.main')
+@EXTENDS('adminlayout')
 @section('content')
 <!DOCTYPE html>
 <html lang="en">
@@ -11,10 +11,10 @@
 <body>
     <form method="POST">
         @csrf
-       Loại <input type="text" name="name" placeholder="Nhập loại">
-       Tên <input type="text" name="address" placeholder="Nhập tên">
-       Ghi chú <input type="text" name="phone" placeholder="Ghi chú">
-        
+       Loại <input type="text" name="loai" placeholder="Nhập loại">
+       Tên <input type="text" name="ten" placeholder="Nhập tên">
+       Ghi chú <input type="text" name="ghichu" placeholder="Ghi chú">
+        <button type="submit">Đăng ký</button>
         
     </form>
 </body>
