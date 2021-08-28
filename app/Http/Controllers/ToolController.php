@@ -19,7 +19,9 @@ class ToolController extends Controller
     function createcontact(Request $request){
         $name = $request -> input('name');
         $address = $request -> input('address');
-        $rs = ToolModel::createcontact($name,$address);
+        $phone = $request -> input('phone');
+        $active = $request -> input('active');
+        $rs = ToolModel::createcontact($name,$address,$phone,$active);
         if($rs == 0){
 
         }
@@ -43,7 +45,9 @@ class ToolController extends Controller
     function updatecontact(Request $request,$id){
         $name = $request -> input('name');
         $address = $request -> input('address');
-        $rs = ToolModel::updatecontact($id,$name,$address);
+        $phone = $request -> input('phone');
+        $active = $request -> input('active');
+        $rs = ToolModel::updatecontact($id,$name,$address,$phone,$active);
         if ($rs == 0){
             return "fail";
 

@@ -15,6 +15,8 @@
         
         <input value="{{$contact->name}}" type="text" name="name" placeholder="Nhập họ tên của bạn">
         <input value="{{$contact->address}}" type="text" name="address" placeholder="Nhập số của bạn">
+        <input type="text" name="phone" placeholder="Nhập sđt">
+        <input type="text" name="active" placeholder="Nhập active">
         <button type="submit">Cập nhật</button>
     @else 
         <h1>Ko có dữ liệu</h1>

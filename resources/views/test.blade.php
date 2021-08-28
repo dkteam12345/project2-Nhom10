@@ -14,18 +14,22 @@
         <tr>
             <td>Name</td>
             <td>Address</td>
+            <td>Phone</td>
+            <td>Active</td>
             <td colspan="2">Action</td>
         </tr>
         @forelse ($contacts as $contact)
         <tr>
             <td>{{$contact->name}}</td>
             <td>{{$contact->address}}</td>
-            <td><a href="{{url('/edit/'.$contact->id)}}">Sửa</a></td>
-            <td><a href="{{url('/delete/'.$contact->id)}}">Xoá</a></td>
+            <td>{{$contact->phone}}</td>
+            <td>{{$contact->active}}</td>
+            <td><a href="{{url('/edit/'.$contact->ID_nv)}}">Sửa</a></td>
+            <td><a href="{{url('/delete/'.$contact->ID_nv)}}">Xoá</a></td>
         </tr>
         @empty
         <tr>
-            <td colspan="4" class="text-center">Danh sách rỗng</td>
+            <td colspan="6" class="text-center">Danh sách rỗng</td>
         </tr>
         @endforelse
     </table>

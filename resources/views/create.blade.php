@@ -12,7 +12,9 @@
     <form method="POST">
         @csrf
         <input type="text" name="name" placeholder="Nhập tên">
-        <input type="text" name="address" placeholder="Nhập Sđt">
+        <input type="text" name="address" placeholder="Nhập đc">
+        <input type="text" name="phone" placeholder="Nhập sđt">
+        <input type="text" name="active" placeholder="Nhập active">
         <button type="submit">Đăng ký</button>
     </form>
 </body>
