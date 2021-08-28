@@ -20,8 +20,24 @@
     <!-- Nav Item - Pages Collapse Menu -->
     <li CLASS="nav-item">
       <a CLASS="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-        <i CLASS="fas fa-fw fa-cog"></i>
+      <i class="fas fa-home"></i>
         <span>Thiết bị</span>
+      </a>
+      <a CLASS="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <i CLASS="fas fa-fw fa-cog"></i>
+        <span>Nhân viên</span>
+      </a>
+      <a CLASS="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+      <i class="fas fa-city"></i>
+        <span>Tầng</span>
+      </a>
+      <a CLASS="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <i CLASS="fas fa-fw fa-cog"></i>
+        <span>Sửa chữa thiết bị</span>
+      </a>
+      <a CLASS="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+      <i class="far fa-newspaper"></i>
+        <span>Báo cáo - Thống kê</span>
       </a>
       <div id="collapseTwo" CLASS="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         {{-- <div CLASS="bg-white py-2 collapse-inner rounded">
