@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/test',[ToolController::class,'test']);
 Route::get('/',[ToolController::class,'index']);
 route::get('/create',function(){
     return view('create');

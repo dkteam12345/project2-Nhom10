@@ -1,4 +1,4 @@
-@EXTENDS('layout.main')
+@EXTENDS('adminlayout')
 @section('content')
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +23,7 @@
             <td>{{$contact->name}}</td>
             <td>{{$contact->address}}</td>
             <td>{{$contact->phone}}</td>
-            <td>{{$contact->active}}</td>
+            <td>{{$contact->active==1?'active':'deactive'}}</td>
             <td><a href="{{url('/edit/'.$contact->ID_nv)}}">Sửa</a></td>
             <td><a href="{{url('/delete/'.$contact->ID_nv)}}">Xoá</a></td>
         </tr>
