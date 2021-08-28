@@ -14,11 +14,22 @@ class ToolController extends Controller
         $contacts = ToolModel::getAllContact();
        
         return view('master',['contacts'=>$contacts]);
+
+        $contacts = ToolModel::getAllloaithietbi();
+       
+        return view('master',['loaithietbi'=>$loaithietbi]);
+
         
     }
     function test(Request $request){
         $contacts = ToolModel::getAllContact();
         return view('test',['contacts'=>$contacts]);
+
+
+        $loaithietbi = ToolModel::getAllloaithietbi();
+        return view('test',['loaithietbi'=>$loaithietbi]);
+
+
     }
     function createcontact(Request $request){
         $name = $request -> input('name');
@@ -60,5 +71,61 @@ class ToolController extends Controller
             return redirect('/');
         }
     }
+
+
+
+
+    // function index(Request $request){
+        
+        
+    //     $contacts = ToolModel::getAllloaithietbi();
+       
+    //     return view('master',['loaithietbi'=>$loaithietbi]);
+        
+    // }
+    // function test(Request $request){
+    //     $loaithietbi = ToolModel::getAllloaithietbi();
+    //     return view('test',['loaithietbi'=>$loaithietbi]);
+    // }
+
+    function createloaithietbi(Request $request){
+        $loai = $request -> input('loai');
+        $ten = $request -> input('ten');
+        $ghichu = $request -> input('ghichu');
+        $rs = ToolModel::createloaithietbi($loai,$ten,$ghichu);
+        if($rs == 0){
+
+        }
+        else{
+            return redirect('/');
+        }
+    }
+    function deleteloaithietbi($id){
+        $rs = ToolModel::deleteid($id);
+        if ($rs == 0){
+            return "fail";
+        }
+        else{
+            return redirect('/');
+        }
+    }
+    function editloaithietbi($id){
+        $loaithietbi = ToolModel::getloaithietbi($id);
+        return view('update',['contact'=>$loaithietbi]);
+    }
+    function updateloaithietbi(Request $request,$id){
+        $loai = $request -> input('loai');
+        $ten = $request -> input('ten');
+        $ghichu = $request -> input('ghichu');
+        $rs = ToolModel::updateloaithietbi($id,$loai,$ten,$ghichu);
+        if ($rs == 0){
+            return "fail";
+
+        }
+        else{
+            return redirect('/');
+        }
+    }
+
    
 }
