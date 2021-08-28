@@ -60,7 +60,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{url('/fix')}}" >
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Sửa chữa thiết bị</span>
+                    <span>Tất cả thiết bị</span>
                 </a>
                 {{-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -88,10 +88,10 @@
                     </div>
                 </div> --}}
             </li>
-            <li>
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="{{url('/thietbi')}}" >
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Thiết bị</span>
+                    <span>Loại thiết bị</span>
                 </a>
             </li>
             <!-- Divider -->
