@@ -13,8 +13,12 @@ class ToolController extends Controller
         
         $contacts = ToolModel::getAllContact();
        
-        return view('test',['contacts'=>$contacts]);
+        return view('master',['contacts'=>$contacts]);
         
+    }
+    function test(Request $request){
+        $contacts = ToolModel::getAllContact();
+        return view('test',['contacts'=>$contacts]);
     }
     function createcontact(Request $request){
         $name = $request -> input('name');
