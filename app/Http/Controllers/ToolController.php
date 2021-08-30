@@ -89,7 +89,7 @@ class ToolController extends Controller
     // }
         function thietbi(){
             $thietbi = ToolModel::getAllthietbi();
-            return view('thietbi',['thietbi'=>$thietbi]);
+            return view('thietbi.thietbi',['thietbi'=>$thietbi]);
         }
     function createthietbi(Request $request){
         $loai = $request -> input('loai');
@@ -117,7 +117,7 @@ class ToolController extends Controller
     }
     function editthietbi($id){
         $thietbi = ToolModel::getthietbi($id);
-        return view('updatethietbi',['thietbi'=>$thietbi]);
+        return view('thietbi.updatethietbi',['thietbi'=>$thietbi]);
     }
     function updatethietbi(Request $request,$id){
         $loai = $request -> input('loai');
@@ -132,6 +132,13 @@ class ToolController extends Controller
             return redirect('/thietbi');
         }
     }
-
+    function trangthietbi(){
+        $trangthietbi = ToolModel::getalltrangthietbi();
+        return view('trangthietbi.trangthietbi',['trangthietbi'=>$trangthietbi]);
+    }
+    function getallphong(){
+        $phong = ToolModel::getallphong();
+        return view('phong.phong',['phong'=>$phong]);
+    }
    
 }
