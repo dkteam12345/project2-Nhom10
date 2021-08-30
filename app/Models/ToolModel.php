@@ -60,40 +60,11 @@ class ToolModel extends Model
     static function getallphong(){
         return DB::select("SELECT ID_phong,tenphong,tang.ID_tang FROM phong INNER JOIN tang ON phong.ID_tang = tang.ID_tang");
     }
-<<<<<<< HEAD
 
-    // static function getAllContact(){
-    //     return DB::select("SELECT * FROM loaithietbi");
-    // }
-    // static function createcontact($loai,$ten,$ghichu){
-    //     return DB::table('nhanvien')->insert([
-    //         'loai'=>$loai,
-    //         'ten'=>$ten,
-    //         'ghichu'=>$ghichu,
-            
-    //     ]);
-    // }
-    // static function deleteid($id){
-    //     return DB::delete("DELETE FROM loaithietbi WHERE ID_loai='$id'");
-    // }
-    // static function getcontact($id){
-    //     $contacts = DB::select("SELECT * FROM loaithietbi WHERE ID_loai='$id'");
-    //     if(count($contacts) == 0) return NULL;
-    //     else return $contacts[0];
-    // }
-    // static function updatecontact($id,$loai,$ten,$ghichu){
-    //     return DB::update("UPDATE loaithietbi SET 
-    //     'loai'=>$loai, 'ten'=>$ten, 'ghichu'=>$ghichu, WHERE ID_loai='$id'");
-    // }
-
-=======
  
     static function getalltrangthietbi(){
         return DB::table('thietbi')->join('loaithietbi','loaithietbi.ID_loai','=','thietbi.ID_loai')->join('phong','phong.ID_phong','=','thietbi.ID_phong')->join('tang','tang.ID_tang','=','thietbi.ID_tang')->select('phong.ID_phong','tang.ID_tang','loaithietbi.loai','thietbi.name','thietbi.soluong','thietbi.ngaynhap','thietbi.tinhtrang')->get();
         
     }
-    static function getallphong(){
-        return DB::select("SELECT tang.ID_tang,tenphong,ID_phong FROM phong INNER JOIN tang ON phong.ID_tang = tang.ID_tang");
-    }
->>>>>>> dff07f3f497188a50ea05f00900161cb9aa341bb
+    
 }

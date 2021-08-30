@@ -132,13 +132,7 @@ class ToolController extends Controller
             return redirect('/thietbi');
         }
     }
-<<<<<<< HEAD
-    function getallphong(){
-        $phong = ToolModel::getallphong();
-        return view('phong',['phong'=>$phong]);
-    }
 
-=======
     function trangthietbi(){
         $trangthietbi = ToolModel::getalltrangthietbi();
         return view('trangthietbi.trangthietbi',['trangthietbi'=>$trangthietbi]);
@@ -147,6 +141,6 @@ class ToolController extends Controller
         $phong = ToolModel::getallphong();
         return view('phong.phong',['phong'=>$phong]);
     }
->>>>>>> dff07f3f497188a50ea05f00900161cb9aa341bb
+
    
 }
