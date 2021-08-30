@@ -132,6 +132,10 @@ class ToolController extends Controller
             return redirect('/thietbi');
         }
     }
+    function getallphong(){
+        $phong = ToolModel::getallphong();
+        return view('phong',['phong'=>$phong]);
+    }
 
    
 }
