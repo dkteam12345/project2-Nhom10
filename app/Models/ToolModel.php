@@ -44,25 +44,20 @@ class ToolModel extends Model
         if(count($contacts) == 0) return NULL;
         else return $contacts[0];
 
-        $contacts = DB::select("SELECT * FROM loaithietbi WHERE ID_loai='$id'");
-        if(count($contacts) == 0) return NULL;
-        else return $contacts[0];
-
+      
 
     }
     static function updatecontact($id,$name,$address,$phone,$active){
         return DB::update("UPDATE nhanvien SET name='$name',address='$address',phone='$phone',active='$active'WHERE ID_nv='$id'");
 
-        return DB::update("UPDATE loaithietbi SET 
-        'loai'=>$loai, 'ten'=>$ten, 'ghichu'=>$ghichu, WHERE ID_loai='$id'");
-
+      
     }
     static function getallphong(){
         return DB::select("SELECT ID_phong,tenphong,tang.ID_tang FROM phong INNER JOIN tang ON phong.ID_tang = tang.ID_tang");
     }
 
     static function getalltang(){
-        return DB::select("SELECT ID_tang,nhanvien.ID_nv FROM tang INNER JOIN nhanvien ON tang.ID_nv =  nhanvien.ID_nv");
+        return DB::select("SELECT ID_tang,nhanvien.ID_nv,nhanvien.name FROM tang INNER JOIN nhanvien ON tang.ID_nv =  nhanvien.ID_nv");
     }
  
     static function getalltrangthietbi(){

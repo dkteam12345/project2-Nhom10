@@ -104,7 +104,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{url('/floor')}}" >
+                <a class="nav-link collapsed" href="{{url('/tang')}}" >
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Danh sách các tầng</span>
                 </a>
