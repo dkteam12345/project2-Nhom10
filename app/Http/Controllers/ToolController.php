@@ -23,7 +23,7 @@ class ToolController extends Controller
     }
     function test(Request $request){
         $contacts = ToolModel::getAllContact();
-        return view('test',['contacts'=>$contacts]);
+        return view('nhanvien.test',['contacts'=>$contacts]);
 
 
         $loaithietbi = ToolModel::getAllloaithietbi();
@@ -55,7 +55,7 @@ class ToolController extends Controller
     }
     function editcontact($id){
         $contact = ToolModel::getcontact($id);
-        return view('update',['contact'=>$contact]);
+        return view('nhanvien.update',['contact'=>$contact]);
     }
     function updatecontact(Request $request,$id){
         $name = $request -> input('name');
