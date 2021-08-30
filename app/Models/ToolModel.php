@@ -61,6 +61,9 @@ class ToolModel extends Model
         return DB::select("SELECT ID_phong,tenphong,tang.ID_tang FROM phong INNER JOIN tang ON phong.ID_tang = tang.ID_tang");
     }
 
+    static function getalltang(){
+        return DB::select("SELECT ID_tang,nhanvien.ID_nv FROM tang INNER JOIN nhanvien ON tang.ID_nv =  nhanvien.ID_nv");
+    }
  
     static function getalltrangthietbi(){
         return DB::table('thietbi')->join('loaithietbi','loaithietbi.ID_loai','=','thietbi.ID_loai')->join('phong','phong.ID_phong','=','thietbi.ID_phong')->join('tang','tang.ID_tang','=','thietbi.ID_tang')->select('phong.ID_phong','tang.ID_tang','loaithietbi.loai','thietbi.name','thietbi.soluong','thietbi.ngaynhap','thietbi.tinhtrang')->get();

@@ -141,6 +141,9 @@ class ToolController extends Controller
         $phong = ToolModel::getallphong();
         return view('phong.phong',['phong'=>$phong]);
     }
-
+    function getalltang() {
+        $tang = ToolModel::getalltang();
+        return view('tang.tang',['tang'=>$tang]);
+    }
    
 }

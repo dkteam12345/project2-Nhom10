@@ -25,3 +25,5 @@ Route::get('/edit/{id}',[ToolController::class,'editcontact']);
 Route::post('/edit/{id}',[ToolController::class,'updatecontact']);
 
 Route::get('/phong',[ToolController::class,'getallphong']);
+
+Route::get('/tang',[ToolController::class,'getalltang']);
