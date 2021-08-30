@@ -132,6 +132,7 @@ class ToolController extends Controller
             return redirect('/thietbi');
         }
     }
+
     function trangthietbi(){
         $trangthietbi = ToolModel::getalltrangthietbi();
         return view('trangthietbi.trangthietbi',['trangthietbi'=>$trangthietbi]);
@@ -139,6 +140,10 @@ class ToolController extends Controller
     function getallphong(){
         $phong = ToolModel::getallphong();
         return view('phong.phong',['phong'=>$phong]);
+    }
+    function getalltang() {
+        $tang = ToolModel::getalltang();
+        return view('tang.tang',['tang'=>$tang]);
     }
    
 }

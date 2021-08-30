@@ -9,23 +9,21 @@
     <title>Document</title>
 </head>
 <body>
-    <table CLASS="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+<table CLASS="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <tr>
-            <td>Số phòng</td>
-            <td>Tên phòng</td>
-            <td>Tầng</td>
+            <td>ID tang</td>
+            <td>ID nhan vien</td>
         </tr>
-        @forelse ($phong as $item)
+        @forelse ($tang as $item)
         <tr>
            
                 <tr>
-                    <td>{{$item->ID_phong}}</td>
-                    <td>{{$item->tenphong}}</td>
                     <td>{{$item->ID_tang}}</td>
+                    <td>{{$item->ID_nv}}</td>
                 </tr>
             @empty
                 <tr>
-                    <td colspan="3">Ko cos Phong</td>
+                    <td colspan="3">Ko co tang</td>
                 </tr>
             
             
