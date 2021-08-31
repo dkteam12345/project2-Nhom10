@@ -15,15 +15,19 @@ class ToolController extends Controller
        
         return view('master',['contacts'=>$contacts]);
 
+        $contacts = ToolModel::getAllloaithietbi();
        
+        return view('master',['loaithietbi'=>$loaithietbi]);
 
         
     }
     function test(Request $request){
         $contacts = ToolModel::getAllContact();
-        return view('nhanvien.test',['contacts'=>$contacts]);
+        return view('test',['contacts'=>$contacts]);
 
 
+        $loaithietbi = ToolModel::getAllloaithietbi();
+        return view('test',['loaithietbi'=>$loaithietbi]);
 
 
     }
@@ -37,7 +41,7 @@ class ToolController extends Controller
 
         }
         else{
-            return redirect('test');
+            return redirect('/');
         }
     }
     function deletecontact($id){
@@ -46,12 +50,12 @@ class ToolController extends Controller
             return "fail";
         }
         else{
-            return redirect('test');
+            return redirect('/');
         }
     }
     function editcontact($id){
         $contact = ToolModel::getcontact($id);
-        return view('nhanvien.update',['contact'=>$contact]);
+        return view('update',['contact'=>$contact]);
     }
     function updatecontact(Request $request,$id){
         $name = $request -> input('name');
@@ -64,7 +68,7 @@ class ToolController extends Controller
 
         }
         else{
-            return redirect('test');
+            return redirect('/');
         }
     }
 
