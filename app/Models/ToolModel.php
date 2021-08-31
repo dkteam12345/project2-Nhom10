@@ -78,5 +78,16 @@ class ToolModel extends Model
     static function getalltang(){
         return DB::select("SELECT ID_tang,nhanvien.ID_nv,nhanvien.name FROM tang INNER JOIN nhanvien ON tang.ID_nv =  nhanvien.ID_nv");
     }
-    
+    static function createtrangthietbi($name,$soluong,$ngaynhap,$tinhtrang,$id_loai,$id_phong,$id_tang){
+        return DB::table('thietbi')->insert([
+            'name'=>$name,
+            'soluong'=>$soluong,
+            'ngaynhap'=>$ngaynhap,
+            'tinhtrang'=>$tinhtrang,
+            'ID_loai'=>$id_loai,
+            'ID_phong'=>$id_phong, 
+            'ID_tang'=>$id_tang,
+            
+        ]);
+    }
 }

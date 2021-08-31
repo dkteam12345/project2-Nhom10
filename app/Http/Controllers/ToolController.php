@@ -141,6 +141,21 @@ class ToolController extends Controller
         $tang = ToolModel::getalltang();
         return view('tang.tang',['tang'=>$tang]);
     }
-
+    function createtrangthietbi(Request $request){
+        $name = $request -> input('name');
+        $soluong = $request -> input('soluong');
+        $ngaynhap = $request -> input('ngaynhap');
+        $tinhtrang = $request -> input('tinhtrang');
+        $id_loai = $request -> input('loai');
+        
+        $id_phong = $request -> input('phong');
+        $id_tang = $request -> input('tang');
+        $rs = ToolModel::createtrangthietbi($name,$soluong,$ngaynhap,$tinhtrang,$id_loai,$id_phong,$id_tang);
+        if ($rs == 0){
+            return "fail";
+        }else{
+        return redirect('/trangthietbi');
+        }
+    }
    
 }

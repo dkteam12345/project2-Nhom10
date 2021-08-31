@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ToolController;
 use App\Models\ToolModel;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,7 +27,7 @@ route::post('/edit/{id}',[ToolController::class,'updatecontact']);
 
 route::get('/thietbi',[ToolController::class,'thietbi']);
 route::get('/createthietbi',function(){
-    return view('createthietbi');
+    return view('thietbi.createthietbi');
 });
 route::post('/createthietbi',[ToolController::class,'createthietbi']);
 route::get('/deletethietbi/{id}',[ToolController::class,'deletethietbi']);
@@ -35,7 +36,8 @@ route::post('/updatethietbi/{id}',[ToolController::class,'updatethietbi']);
 
 route::get('/trangthietbi',[ToolController::class,'trangthietbi']);
 route::get('/createtrangthietbi',function(){
-    return view('createtrangthietbi');
+    return view('trangthietbi.createtrangthietbi')->with('tang',DB::table('tang')->get())->with('phong',DB::table('phong')->get())->with('thietbi',DB::table('loaithietbi')->get());
+    
 });
 route::post('/createtrangthietbi',[ToolController::class,'createtrangthietbi']);
 route::get('/updatetrangthietbi/{id}',[ToolController::class,'edittrangthietbi']);

@@ -9,7 +9,7 @@
     <title>Loại thiết bị</title>
 </head>
 <body>
-    <a href="{{url('/createthietbi')}}">Thêm loại thiết bị</a>
+    <a href="{{url('/createtrangthietbi')}}">Thêm loại thiết bị</a>
     <table CLASS="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <tr>
             
@@ -27,7 +27,7 @@
             <td>{{$item->name}}</td>
             <td>{{$item->soluong}}</td>
             <td>{{$item->ngaynhap}}</td>
-            <td>{{$item->tinhtrang}}</td>
+            <td>{{$item->tinhtrang==1?'Ổn định':'Đang bảo trì'}}</td>
             <td>{{$item->ID_phong}}</td>
             <td>{{$item->ID_tang}}</td>
             <td>{{$item->loai}}</td>
