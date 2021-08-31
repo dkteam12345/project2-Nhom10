@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+
 
 class ToolModel extends Model
 {
@@ -36,8 +38,6 @@ class ToolModel extends Model
         $contacts = DB::select("SELECT * FROM nhanvien WHERE ID_nv='$id'");
         if(count($contacts) == 0) return NULL;
         else return $contacts[0];
-
-
     }
     static function updatecontact($id,$name,$address,$phone,$active){
         return DB::update("UPDATE nhanvien SET name='$name',address='$address',phone='$phone',active='$active'WHERE ID_nv='$id'");
@@ -47,6 +47,7 @@ class ToolModel extends Model
 
     static function getAllthietbi(){
         return DB::select("SELECT * FROM loaithietbi");
+        
     }
     static function createthietbi($loai,$ten,$ghichu){
         return DB::table('loaithietbi')->insert([
