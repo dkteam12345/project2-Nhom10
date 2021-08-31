@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/test',[ToolController::class,'test']);
 Route::get('/',[ToolController::class,'index']);
 route::get('/create',function(){
-    return view('create');
+    return view('nhanvien.create');
 });
 Route::post('/create',[ToolController::class,'createcontact']);
 route::get('/delete/{id}',[ToolController::class,'deletecontact']);

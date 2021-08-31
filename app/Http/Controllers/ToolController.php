@@ -37,7 +37,7 @@ class ToolController extends Controller
 
         }
         else{
-            return redirect('/');
+            return redirect('test');
         }
     }
     function deletecontact($id){
@@ -46,7 +46,7 @@ class ToolController extends Controller
             return "fail";
         }
         else{
-            return redirect('/');
+            return redirect('test');
         }
     }
     function editcontact($id){
@@ -64,7 +64,7 @@ class ToolController extends Controller
 
         }
         else{
-            return redirect('/');
+            return redirect('test');
         }
     }
 
