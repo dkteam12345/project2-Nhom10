@@ -34,7 +34,10 @@ route::get('/deletethietbi/{id}',[ToolController::class,'deletethietbi']);
 route::get('updatethietbi/{id}',[ToolController::class,'editthietbi']);
 route::post('/updatethietbi/{id}',[ToolController::class,'updatethietbi']);
 
-route::get('/trangthietbi',[ToolController::class,'trangthietbi']);
+// route::get('/trangthietbi',[ToolController::class,'trangthietbi']);
+
+Route::get('/trangthietbi',[ToolController::class,'trangthietbi'])->name('search');
+
 route::get('/createtrangthietbi',function(){
     return view('trangthietbi.createtrangthietbi')->with('tang',DB::table('tang')->get())->with('phong',DB::table('phong')->get())->with('thietbi',DB::table('loaithietbi')->get());
     

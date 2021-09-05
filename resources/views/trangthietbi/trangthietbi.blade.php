@@ -10,6 +10,14 @@
 </head>
 <body>
     <a href="{{url('/createtrangthietbi')}}">Thêm loại thiết bị</a>
+
+    <form method="GET" action="{{route('search')}}" style="float: right; margin-right: 16px">
+        {{-- @csrf --}}
+        <input type="text" name="keywork" placeholder="Tim kiem">
+        <button type="submit" class="btn-primary">Search</button>
+
+    </form>
+
     <table CLASS="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <tr>
             
@@ -30,7 +38,7 @@
             <td>{{$item->tinhtrang==1?'Ổn định':'Đang bảo trì'}}</td>
             <td>{{$item->ID_phong}}</td>
             <td>{{$item->ID_tang}}</td>
-            <td>{{$item->loai}}</td>
+            <td>{{$item->ID_loai}}</td>
             
         </tr>
         @empty

@@ -132,10 +132,20 @@ class ToolController extends Controller
             return redirect('/thietbi');
         }
     }
-    function trangthietbi(){
-        $trangthietbi = ToolModel::getalltrangthietbi();
+
+    function trangthietbi(Request $red){
+        $keyword = $red->input('keyword','');
+        $trangthietbi = ToolModel::getalltrangthietbi($keyword);
+
         return view('trangthietbi.trangthietbi',['trangthietbi'=>$trangthietbi]);
+
     }
+
+
+    // function trangthietbi(){
+    //     $trangthietbi = ToolModel::getalltrangthietbi();
+    //     return view('trangthietbi.trangthietbi',['trangthietbi'=>$trangthietbi]);
+    // }
     function getallphong(){
         $phong = ToolModel::getallphong();
         return view('phong.phong',['phong'=>$phong]);
