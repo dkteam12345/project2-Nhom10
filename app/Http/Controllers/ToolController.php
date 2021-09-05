@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ToolModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ToolController extends Controller
 {
@@ -135,10 +136,16 @@ class ToolController extends Controller
 
     function trangthietbi(Request $red){
         $keyword = $red->input('keyword','');
-        $trangthietbi = ToolModel::getalltrangthietbi($keyword);
+        // $trangthietbi = ToolModel::getalltrangthietbi($keyword);
 
+        // return view('trangthietbi.trangthietbi',['trangthietbi'=>$trangthietbi]);
+
+        $trangthietbi = DB::table('thietbi')
+        ->join('loaithietbi','loaithietbi.ID_loai','=','thietbi.ID_loai')->join('phong','phong.ID_phong','=','thietbi.ID_phong')->join('tang','tang.ID_tang','=','thietbi.ID_tang')
+        ->select('phong.ID_phong','tang.ID_tang','loaithietbi.ID_loai','thietbi.name','thietbi.soluong','thietbi.ngaynhap','thietbi.tinhtrang')
+        ->where('name','LIKE','%'.$keyword.'%')
+        ->get();
         return view('trangthietbi.trangthietbi',['trangthietbi'=>$trangthietbi]);
-
     }
 
 

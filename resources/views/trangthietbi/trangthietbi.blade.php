@@ -13,7 +13,7 @@
 
     <form method="GET" action="{{route('search')}}" style="float: right; margin-right: 16px">
         {{-- @csrf --}}
-        <input type="text" name="keywork" placeholder="Tim kiem">
+        <input type="text" name="keyword" placeholder="Tim kiem">
         <button type="submit" class="btn-primary">Search</button>
 
     </form>
