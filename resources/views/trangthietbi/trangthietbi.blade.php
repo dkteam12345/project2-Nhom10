@@ -47,12 +47,6 @@
         </tr>
         @endforelse
     </table>
-
-    <div class="container d-flex justify-content-center" style="width:auto">
-        {{$trangthietbi->links()}}
-    </div>
-    
-
 </body>
 </html>
 @endsection
