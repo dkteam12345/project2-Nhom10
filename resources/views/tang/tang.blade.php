@@ -20,7 +20,8 @@
         <tr>
             <td>{{$item->ID_tang}}</td>
             <td>{{$item->name}}</td>
-            
+            <td><a href="{{url('/updatetang/'.$item->ID_tang)}}">Sửa</a></td>
+            <td><a href="{{url('/deletetang/'.$item->ID_tang)}}">Xoá</a></td>
            
             
         </tr>

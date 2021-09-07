@@ -39,7 +39,11 @@
             <td>{{$item->ID_phong}}</td>
             <td>{{$item->ID_tang}}</td>
             <td>{{$item->ID_loai}}</td>
-            
+            <td><a href="{{url('/updatetrangthietbi/'.$item->ID_loai)}}">Sửa</a></td>
+            <td><a href="{{url('/deletetrangthietbi/'.$item->ID_loai)}}">Xoá</a></td>
+
+
+
         </tr>
         @empty
         <tr>
