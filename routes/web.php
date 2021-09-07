@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ToolController;
+use App\Models\Report;
 use App\Models\ToolModel;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -58,3 +60,8 @@ route::get('/deletetang/{id}',[ToolController::class,'deletetang']);
 Route::get('/updatetang/{id}',[ToolController::class,'edittang']);
 Route::post('/updatetang/{id}',[ToolController::class,'updatetang']);
 
+route::get('/baocao',[ReportController::class,'getallbaocao']);
+route::get('/createbaocao',function(){
+    return view('baocaocuanhanvien.createbaocao')->with('nhanvien',DB::table('nhanvien')->get())->with('thietbi',DB::table('thietbi')->get());
+});
+route::post('/createbaocao',[ReportController::class,'createbaocao']);

@@ -73,7 +73,7 @@
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{url('/report')}}" >
+                <a class="nav-link collapsed" href="{{url('/baocao')}}" >
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Báo cáo thống kê</span>
                 </a>
