@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ToolController;
+use App\Models\Report;
 use App\Models\ToolModel;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -49,3 +50,4 @@ route::post('/updatetrangthietbi/{id}',[ToolController::class,'updatetrangthietb
 route::get('/phong',[ToolController::class,'getallphong']);
 Route::get('/tang',[ToolController::class,'getalltang']);
 
+route::get('/baocao',[Report::class,'getallbaocao']);

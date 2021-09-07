@@ -16,10 +16,7 @@ class ToolController extends Controller
        
         return view('master',['contacts'=>$contacts]);
 
-        $contacts = ToolModel::getAllloaithietbi();
        
-        return view('master',['loaithietbi'=>$loaithietbi]);
-
         
     }
     function test(Request $request){
