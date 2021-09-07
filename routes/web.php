@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ToolController;
 use App\Models\Report;
 use App\Models\ToolModel;
@@ -50,4 +51,8 @@ route::post('/updatetrangthietbi/{id}',[ToolController::class,'updatetrangthietb
 route::get('/phong',[ToolController::class,'getallphong']);
 Route::get('/tang',[ToolController::class,'getalltang']);
 
-route::get('/baocao',[Report::class,'getallbaocao']);
+route::get('/baocao',[ReportController::class,'getallbaocao']);
+route::get('/createbaocao',function(){
+    return view('baocaocuanhanvien.createbaocao')->with('nhanvien',DB::table('nhanvien')->get())->with('thietbi',DB::table('thietbi')->get());
+});
+route::post('/createbaocao',[ReportController::class,'createbaocao']);

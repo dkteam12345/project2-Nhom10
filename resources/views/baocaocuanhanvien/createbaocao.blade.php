@@ -12,9 +12,11 @@
     <form method="POST">
         @csrf
         
-        <input type="date" name="ngaykiemke" placeholder="Nhập datetime">
+        <input type="date" name="ngaykiemtra" placeholder="Nhập datetime">
         <input type="textarea" name="loaikiemke" placeholder="Thống kê">
-        <div class="form-group">
+        <input type="number" name='nhanvien' placeholder="Số nv">
+        <input type="number" name='thietbi' placeholder="Số thiết bị">
+        {{-- <div class="form-group">
             <label for="">Nhân viên/label>
             <select class="form-control" name="tang" id="">
             @forelse ($contacts as $contact)
@@ -37,7 +39,7 @@
     @endforelse
           </select>
         </div>
-    </select>
+    </select> --}}
     
     
         <button type="submit">Đăng ký</button>

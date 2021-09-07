@@ -25,8 +25,8 @@
         @forelse ($baocao as $item)
         <tr>
             
-            <td>{{$item->ID_nv}}</td>
-            <td>{{$item->ID_tb}}</td>
+            <td>{{$item->tennv}}</td>
+            <td>{{$item->name}}</td>
             <td>{{$item->ngaykiemtra}}</td>
             <td>{{$item->loaikiemke}}</td>
            
@@ -41,3 +41,4 @@
 </body>
 </html>
 @endsection
+
