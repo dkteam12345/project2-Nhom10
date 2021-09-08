@@ -22,6 +22,10 @@ Route::get('/',[ToolController::class,'index']);
 route::get('/create',function(){
     return view('nhanvien.create');
 });
++Route::get('/login',function(){
+    return view('loginadmin.login');
+});
+route::post('/login',[AdminController::class,'login']);
 Route::post('/create',[ToolController::class,'createcontact']);
 route::get('/delete/{id}',[ToolController::class,'deletecontact']);
 route::get('/edit/{id}',[ToolController::class,'editcontact']);

@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class AdminModel extends Model
 {
     use HasFactory;
-    protected $
+    protected $table = 'admin';
+    protected $fillable = ['gmail','password'];
 }
