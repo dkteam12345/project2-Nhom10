@@ -49,11 +49,20 @@ route::get('/createtrangthietbi',function(){
     
 });
 route::post('/createtrangthietbi',[ToolController::class,'createtrangthietbi']);
+Route::get('/deletetrangthietbi/{id}',[ToolController::class,'deletetrangthietbi']);
 route::get('/updatetrangthietbi/{id}',[ToolController::class,'edittrangthietbi']);
 route::post('/updatetrangthietbi/{id}',[ToolController::class,'updatetrangthietbi']);
 
 route::get('/phong',[ToolController::class,'getallphong']);
+route::get('/deletephong/{id}',[ToolController::class,'deletephong']);
+Route::get('/updatephong/{id}',[ToolController::class,'editphong']);
+Route::post('/updatephong/{id}',[ToolController::class,'updatephong']);
+
+
 Route::get('/tang',[ToolController::class,'getalltang']);
+route::get('/deletetang/{id}',[ToolController::class,'deletetang']);
+Route::get('/updatetang/{id}',[ToolController::class,'edittang']);
+Route::post('/updatetang/{id}',[ToolController::class,'updatetang']);
 
 route::get('/baocao',[ReportController::class,'getallbaocao']);
 route::get('/createbaocao',function(){

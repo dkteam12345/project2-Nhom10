@@ -141,7 +141,7 @@ class ToolController extends Controller
         ->join('loaithietbi','loaithietbi.ID_loai','=','thietbi.ID_loai')->join('phong','phong.ID_phong','=','thietbi.ID_phong')->join('tang','tang.ID_tang','=','thietbi.ID_tang')
         ->select('phong.ID_phong','tang.ID_tang','loaithietbi.ID_loai','thietbi.name','thietbi.soluong','thietbi.ngaynhap','thietbi.tinhtrang')
         ->where('name','LIKE','%'.$keyword.'%')
-        ->paginate(5);
+        ->paginate(1);
         return view('trangthietbi.trangthietbi',['trangthietbi'=>$trangthietbi]);
         
        
@@ -156,11 +156,76 @@ class ToolController extends Controller
         $phong = ToolModel::getallphong();
         return view('phong.phong',['phong'=>$phong]);
     }
+
+    function deletephong($id){
+        $rs = ToolModel::deletephong($id);
+        if ($rs == 0){
+           
+            return "fail";
+        }
+        else{
+           
+            return redirect('/phong');
+        }
+    }
+
+    function editphong($id){
+        $phong = ToolModel::getphong($id);
+        return view('phong.updatephong',['phong'=>$phong]);
+    }
+
+    function updatephong(Request $request,$id){
+        $tenphong = $request -> input('tenphong');
+        $ID_tang = $request -> input('ID_tang');
+        $rs = ToolModel::updatephong($id,$tenphong,$ID_tang);
+        if ($rs == 0){
+            return "fail";
+
+        }
+        else{
+            return redirect('/phong');
+        }
+    }
+
+
    
     function getalltang() {
         $tang = ToolModel::getalltang();
         return view('tang.tang',['tang'=>$tang]);
     }
+
+    function deletetang($id){
+        $rs = ToolModel::deletetang($id);
+        if ($rs == 0){
+           
+            return "fail";
+        }
+        else{
+           
+            return redirect('/tang');
+        }
+    }
+
+    function edittang($id){
+        $tang = ToolModel::gettang($id);
+        return view('tang.updatetang',['tang'=>$tang]);
+    }
+
+    function updatetang(Request $request,$id){
+        $ID_nv = $request -> input('ID_nv');
+        $rs = ToolModel::updatetang($id,$ID_nv);
+        if ($rs == 0){
+            return "fail";
+
+        }
+        else{
+            return redirect('/tang');
+        }
+    }
+
+
+
+
     function createtrangthietbi(Request $request){
         $name = $request -> input('name');
         $soluong = $request -> input('soluong');
@@ -179,4 +244,40 @@ class ToolController extends Controller
 
     }
    
+    function deletetrangthietbi($id){
+        $rs = ToolModel::deletetrangthietbi($id);
+        if ($rs == 0){
+           
+            return "fail";
+        }
+        else{
+           
+            return redirect('/trangthietbi');
+        }
+    }
+
+    function edittrangthietbi($id){
+        $trangthietbi = ToolModel::gettrangthietbi($id);
+        return view('trangthietbi.updatetrangthietbi',['trangthietbi'=>$trangthietbi]);
+    }
+
+    function updatetrangthietbi(Request $request,$id){
+        $name = $request -> input('name');
+        $soluong = $request -> input('soluong');
+        $ngaynhap = $request -> input('ngaynhap');
+        $tinhtrang = $request -> input('tinhtrang');
+        $ID_loai = $request -> input('ID_loai');
+        $ID_phong = $request -> input('ID_phong');
+        $ID_tang = $request -> input('ID_tang');
+        $rs = ToolModel::updatethietbi($name,$soluong,$ngaynhap,$tinhtrang,$ID_loai,$ID_phong,$ID_tang);
+        if ($rs == 0){
+            return "fail";
+
+        }
+        else{
+            return redirect('/trangthietbi');
+        }
+    }
+
+
 }

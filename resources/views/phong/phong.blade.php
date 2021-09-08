@@ -21,7 +21,8 @@
             <td>{{$item->ID_phong}}</td>
             <td>{{$item->tenphong}}</td>
             <td>{{$item->ID_tang}}</td>
-           
+            <td><a href="{{url('/updatephong/'.$item->ID_phong)}}">Sửa</a></td>
+            <td><a href="{{url('/deletephong/'.$item->ID_phong)}}">Xoá</a></td>
             
         </tr>
         @empty

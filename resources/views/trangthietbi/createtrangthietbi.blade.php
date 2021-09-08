@@ -16,8 +16,8 @@
         <input type="date" name="ngaynhap" placeholder="Nhập datetime">
         <input type="text" name="tinhtrang" placeholder="Nhập tình trạng">
         <div class="form-group">
-            <label for="">Tầng</label>
-            <select class="form-control" name="tang" id="">
+            <label for=""><b>Tầng</b></label>
+            <select class="form-control" style="width:190px; margin-left: 20px" name="tang" id="">
             @forelse ($tang as $item)
                 
                     <option value="{{$item->ID_tang}}">{{$item->ID_tang}}</option>
@@ -27,8 +27,8 @@
             @endforelse</div>
         </select>
         <div class="form-group">
-          <label for=""></label>
-          <select class="form-control" name="phong" id="">
+          <label for=""><b>Phòng</b></label>
+          <select class="form-control" style="width:190px; margin-left: 20px" name="phong" id="">
             @forelse ($phong as $item)
                 
             <option value="{{$item->ID_phong}}">{{$item->ID_phong}}</option>
@@ -40,8 +40,8 @@
         </div>
     </select>
     <div class="form-group">
-      <label for=""></label>
-      <select class="form-control" name="loai" id="">
+      <label for=""><b>Loại thiết bị</b></label>
+      <select class="form-control" style="width:190px; margin-left: 20px" name="loai" id="">
         @forelse ($thietbi as $item)
             
         <option value="{{$item->ID_loai}}">{{$item->ID_loai}}</option>
@@ -51,7 +51,7 @@
 @endforelse
       </select>
     </div>
-        <button type="submit">Đăng ký</button>
+        <button type="submit" style="margin-left: 30px">Nhập</button>
     </form>
 </body>
 </html>
