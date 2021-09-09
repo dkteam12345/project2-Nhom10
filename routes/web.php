@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ToolController;
 use App\Models\Report;
@@ -22,7 +23,7 @@ Route::get('/',[ToolController::class,'index']);
 route::get('/create',function(){
     return view('nhanvien.create');
 });
-+Route::get('/login',function(){
+Route::get('/login',function(){
     return view('loginadmin.login');
 });
 route::post('/login',[AdminController::class,'login']);

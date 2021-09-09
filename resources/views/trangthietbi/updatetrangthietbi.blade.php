@@ -15,11 +15,11 @@
         
         <input value="{{$trangthietbi->name}}" type="text" name="name" placeholder="Nhập name">
         <input value="{{$trangthietbi->soluong}}" type="text" name="soluong" placeholder="Nhập số lượng">
-        <input value="{{$trangthietbi->ngaynhap}" type="text" name="ngaynhap" placeholder="Ngày nhập">
-        <input value="{{$trangthietbi->tinhtrang}" type="text" name="tinhtrang" placeholder="Tình trạng">
-        <input value="{{$trangthietbi->ID_loai}" type="text" name="ID_loai" placeholder="Nhập ID_loai">
-        <input value="{{$trangthietbi->ID_phong}" type="text" name="ID_phong" placeholder="Nhập ID_phong">
-        <input value="{{$trangthietbi->ID_tang}" type="text" name="ID_tang" placeholder="Nhập ID_tang">
+        <input value="{{$trangthietbi->ngaynhap}}" type="date" name="ngaynhap" placeholder="Ngày nhập">
+        <input value="{{$trangthietbi->tinhtrang}}" type="text" name="tinhtrang" placeholder="Tình trạng">
+        <input value="{{$trangthietbi->ID_loai}}" type="number" name="ID_loai" placeholder="Nhập ID_loai">
+        <input value="{{$trangthietbi->ID_phong}}" type="number" name="ID_phong" placeholder="Nhập ID_phong">
+        <input value="{{$trangthietbi->ID_tang}}" type="number" name="ID_tang" placeholder="Nhập ID_tang">
         <button type="submit">Cập nhật</button>
     @else 
         <h1>Ko có dữ liệu</h1>

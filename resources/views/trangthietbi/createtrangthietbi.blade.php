@@ -44,7 +44,7 @@
       <select class="form-control" style="width:190px; margin-left: 20px" name="loai" id="">
         @forelse ($thietbi as $item)
             
-        <option value="{{$item->ID_loai}}">{{$item->ID_loai}}</option>
+        <option value="{{$item->ID_loai}}">{{$item->ten}}</option>
         
 @empty
 

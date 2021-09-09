@@ -271,7 +271,9 @@ class ToolController extends Controller
         $ID_tang = $request -> input('ID_tang');
         $rs = ToolModel::updatethietbi($name,$soluong,$ngaynhap,$tinhtrang,$ID_loai,$ID_phong,$ID_tang);
         if ($rs == 0){
-            return "fail";
+            
+            return "";
+
 
         }
         else{

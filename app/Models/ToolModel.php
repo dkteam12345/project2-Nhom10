@@ -142,7 +142,8 @@ class ToolModel extends Model
     }
 
     static function updatetrangthietbi($id,$name,$soluong,$ngaynhap,$tinhtrang,$ID_loai,$ID_phong,$ID_tang){
-        return DB::update("UPDATE thietbi SET name='$name',soluong='$soluong',
+   
+       return DB::update("UPDATE thietbi SET name='$name',soluong='$soluong',
         ngaynhap='$ngaynhap',
         tinhtrang='$tinhtrang',
         ID_loai='$ID_loai',
