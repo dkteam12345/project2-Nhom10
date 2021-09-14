@@ -23,7 +23,7 @@ class Admin
             return $next($request);
         }
         else{
-            return redirect()->route('login');
+            return redirect('/login');
         }
     }
     

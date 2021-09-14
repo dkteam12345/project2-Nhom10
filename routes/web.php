@@ -19,23 +19,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/test',[ToolController::class,'test']);
-Route::middleware('auth')->group(function(){   
-    Route::get('/',[ToolController::class,'index']);
-    route::get('/thietbi',[ToolController::class,'thietbi']);
-});
+Route::get('/',[ToolController::class,'index']);
 route::get('/create',function(){
     return view('nhanvien.create');
 });
 Route::get('/login',function(){
     return view('loginadmin.login');
 });
-route::post('/login',[AdminController::class,'login'])->name('login');
+route::post('/login',[AdminController::class,'login']);
 Route::post('/create',[ToolController::class,'createcontact']);
 route::get('/delete/{id}',[ToolController::class,'deletecontact']);
 route::get('/edit/{id}',[ToolController::class,'editcontact']);
 route::post('/edit/{id}',[ToolController::class,'updatecontact']);
 
-
+route::get('/thietbi',[ToolController::class,'thietbi']);
 route::get('/createthietbi',function(){
     return view('thietbi.createthietbi');
 });
