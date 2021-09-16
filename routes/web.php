@@ -70,3 +70,4 @@ route::get('/createbaocao',function(){
     return view('baocaocuanhanvien.createbaocao')->with('nhanvien',DB::table('nhanvien')->get())->with('thietbi',DB::table('thietbi')->get());
 });
 route::post('/createbaocao',[ReportController::class,'createbaocao']);
+route::get('/logout',[AdminController::class,'logout']);
