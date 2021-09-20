@@ -18,7 +18,7 @@ class AdminController extends Controller
         if ($gmail->password == ($request->password)){
             Session::put('ss',$gmail);
             Session::put('mail',$gmail->gmail);
-            Session::get('ss');
+           
             return redirect('/test');
         }
         else{

@@ -13,11 +13,15 @@
         @csrf
         
         <input type="date" name="ngaykiemtra" placeholder="Nhập datetime">
-        <input type="textarea" name="loaikiemke" placeholder="Thống kê">
-        <input type="number" name='nhanvien' placeholder="Số nv">
-        <input type="number" name='thietbi' placeholder="Số thiết bị">
-        {{-- <div class="form-group">
-            <label for="">Nhân viên/label>
+        
+        <div class="form-group">
+          <label for=""></label>
+          <textarea type="" name="loaikiemke" rows="3" col="18" placeholder="Thống kê"></textarea>
+        </div>
+        {{-- <input type="number" name='nhanvien' placeholder="Số nv">
+        <input type="number" name='thietbi' placeholder="Số thiết bị"> --}}
+        <div class="form-group">
+            {{-- <label for="">Nhân viên/label>
             <select class="form-control" name="tang" id="">
             @forelse ($contacts as $contact)
                 
@@ -25,21 +29,26 @@
                     
             @empty
             
-            @endforelse</div>
+            @endforelse</div> --}}
+            @php
+                $input = Session::get('ss');
+                
+            @endphp
+            
         </select>
         <div class="form-group">
           <label for=""></label>
-          <select class="form-control" name="phong" id="">
-            @forelse ($trangthietbi as $item)
+          <select class="form-control" name="thietbi" id="">
+            @forelse ($thietbi as $item)
                 
-            <option value="{{$item->ID_tb}}">{{$item->thietbi.name}}</option>
+            <option value="{{$item->ID_tb}}">{{$item->name}}</option>
             
     @empty
     
     @endforelse
           </select>
         </div>
-    </select> --}}
+    </select>
     
     
         <button type="submit">Đăng ký</button>

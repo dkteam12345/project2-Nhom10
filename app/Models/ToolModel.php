@@ -136,19 +136,19 @@ class ToolModel extends Model
     }
 
     static function gettrangthietbi($id){
-        $contacts = DB::select("SELECT * FROM thietbi WHERE ID_loai='$id'");
+        $contacts = DB::select("SELECT * FROM thietbi WHERE ID_tb='$id'");
         if(count($contacts) == 0) return NULL;
         else return $contacts[0];
     }
 
     static function updatetrangthietbi($id,$name,$soluong,$ngaynhap,$tinhtrang,$ID_loai,$ID_phong,$ID_tang){
-   
+        
        return DB::update("UPDATE thietbi SET name='$name',soluong='$soluong',
         ngaynhap='$ngaynhap',
         tinhtrang='$tinhtrang',
         ID_loai='$ID_loai',
         ID_phong='$ID_phong', 
-        ID_tang='$ID_tang' WHERE ID_loai='$id'");
+        ID_tang='$ID_tang' WHERE ID_tb='$id'");
     }
 
 }
