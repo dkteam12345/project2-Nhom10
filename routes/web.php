@@ -71,3 +71,4 @@ route::get('/createbaocao',function(){
 });
 route::post('/createbaocao',[ReportController::class,'createbaocao']);
 route::get('/logout',[AdminController::class,'logout']);
+route::get('/chart',[ToolController::class,'chart']);
