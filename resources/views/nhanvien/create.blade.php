@@ -15,7 +15,7 @@
         <input type="text" name="address" placeholder="Nhập đc">
         <input type="text" name="phone" placeholder="Nhập sđt">
         <input type="text" name="active" placeholder="Nhập active">
-        <button type="submit">Đăng ký</button>
+        <button class="btn btn-success btn-icon-split" type="submit" style="margin-left: 30px">Nhập</button>
     </form>
 </body>
 </html>

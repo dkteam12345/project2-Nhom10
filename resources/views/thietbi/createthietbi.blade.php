@@ -14,7 +14,7 @@
        Loại <input type="text" name="loai" placeholder="Nhập loại">
        Tên <input type="text" name="ten" placeholder="Nhập tên">
        Ghi chú <input type="text" name="ghichu" placeholder="Ghi chú">
-        <button type="submit">Đăng ký</button>
+       <button class="btn btn-success btn-icon-split" type="submit" style="margin-left: 30px">Nhập</button>
         
     </form>
 </body>

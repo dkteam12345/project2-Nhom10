@@ -51,7 +51,7 @@
 @endforelse
       </select>
     </div>
-        <button type="submit" style="margin-left: 30px">Nhập</button>
+        <button class="btn btn-success btn-icon-split" type="submit" style="margin-left: 30px">Nhập</button>
     </form>
 </body>
 </html>

@@ -16,16 +16,16 @@
             <td>Address</td>
             <td>Phone</td>
             <td>Active</td>
-            <td colspan="2">Action</td>
+            <td >Action</td>
         </tr>
         @forelse ($contacts as $contact)
         <tr>
             <td>{{$contact->name}}</td>
             <td>{{$contact->address}}</td>
             <td>{{$contact->phone}}</td>
-            <td>{{$contact->active==1?'active':'deactive'}}</td>
-            <td><a href="{{url('/edit/'.$contact->ID_nv)}}">Sửa</a></td>
-            <td><a href="{{url('/delete/'.$contact->ID_nv)}}">Xoá</a></td>
+            <td>{{$contact->active==1?'Đang hoạt động':'Đã nghỉ việc'}}</td>
+            <td><button class="btn btn-primary btn-icon-split"><a class="icon text-white-50" href="{{url('/edit/'.$contact->ID_nv)}}">Sửa</a></button></td>
+          
         </tr>
         @empty
         <tr>

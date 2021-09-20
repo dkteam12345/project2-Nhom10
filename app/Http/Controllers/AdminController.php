@@ -19,7 +19,7 @@ class AdminController extends Controller
             Session::put('ss',$gmail);
             Session::put('mail',$gmail->gmail);
            
-            return redirect('/test');
+            return redirect('/dashboard');
         }
         else{
             
@@ -32,4 +32,13 @@ class AdminController extends Controller
         Session::put('ss',NULL);
         return redirect('/login');
     }
+    function dashboard(){
+        $demtb = DB::select('SELECT COUNT(`name`) as dem FROM thietbi')[0];
+        $dembc = DB::select('SELECT COUNT(`ID_hd`) as dem FROM bienban')[0];
+        $demnv = DB::select('SELECT COUNT(`ID_nv`) as dem  from nhanvien  WHERE active="1"')[0];
+        return view('dashboard.dashboard')->with('demtb',$demtb)->with('dembc',$dembc)->with('demnv',$demnv);
+
+        
+    }
+    
 }
