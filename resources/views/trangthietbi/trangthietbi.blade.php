@@ -17,6 +17,7 @@
         <button type="submit" class="btn-primary">Search</button>
 
     </form>
+    <br><br>
 
     <table CLASS="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <tr>
@@ -51,6 +52,7 @@
         </tr>
         @endforelse
     </table>
+    <br>
 
     <div class="container d-flex justify-content-center" style="width:auto">
         {{$trangthietbi->links()}}
