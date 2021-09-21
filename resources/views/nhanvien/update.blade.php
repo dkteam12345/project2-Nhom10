@@ -12,12 +12,13 @@
     @if($contact != NULL)
     <form method="POST">
         @csrf
-        
-        <input value="{{$contact->name}}" type="text" name="name" placeholder="Nhập họ tên của bạn">
-        <input value="{{$contact->address}}" type="text" name="address" placeholder="Nhập số của bạn">
-        <input type="text" name="phone" placeholder="Nhập sđt">
-        <input type="text" name="active" placeholder="Nhập active">
-        <button type="submit">Cập nhật</button>
+        <table>
+        <tr><td><p><b>Tên</b></p></td><td> <input style="width:390px; margin-left: 20px" value="{{$contact->name}}" type="text" name="name" placeholder="Nhập họ tên của bạn"></td></tr>
+        <tr><td><p><b>Địa chỉ</b></p></td><td> <input style="width:390px; margin-left: 20px" value="{{$contact->address}}" type="text" name="address" placeholder="Nhập số của bạn"></td></tr>
+        <tr><td><p><b>Số điện thoại</b></p></td><td> <input style="width:390px; margin-left: 20px" value="{{$contact->phone}}" type="text" name="phone" placeholder="Nhập sđt"></td></tr>
+        <tr><td><p><b>Active</b></p></td><td> <input style="width:390px; margin-left: 20px" value="{{$contact->active}}" type="text" name="active" placeholder="Nhập active"></td></tr>
+        </table><br>
+        <button style="margin-left: 160px;" type="submit">Cập nhật</button>
     @else 
         <h1>Ko có dữ liệu</h1>
     @endif

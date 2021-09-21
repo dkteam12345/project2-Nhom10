@@ -11,11 +11,13 @@
 <body>
     <form method="POST">
         @csrf
-        <input type="text" name="name" placeholder="Nhập tên">
-        <input type="text" name="address" placeholder="Nhập đc">
-        <input type="text" name="phone" placeholder="Nhập sđt">
-        <input type="text" name="active" placeholder="Nhập active">
-        <button type="submit">Đăng ký</button>
+        <table>
+        <tr><td><p><b>Tên</b></p></td><td> <input style="width:390px;margin-left: 20px" type="text" name="name" placeholder="Nhập tên"></td></tr>
+        <tr><td><p><b>Địa chỉ</b></p></td><td><input style="width:390px;margin-left: 20px" type="text" name="address" placeholder="Nhập đc"></td></tr>
+        <tr><td><p><b>Số điện thoại</b></p></td><td><input style="width:390px;margin-left: 20px" type="text" name="phone" placeholder="Nhập sđt"></td></tr>
+        <tr><td><p><b>Active</b></p></td><td><input style="width:390px;margin-left: 20px" type="text" name="active" placeholder="Nhập active"></td></tr>
+        </table><br>
+        <button style="margin-left: 160px;" type="submit">Đăng ký</button>
     </form>
 </body>
 </html>
