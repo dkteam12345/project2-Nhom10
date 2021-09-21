@@ -56,7 +56,7 @@
       </select>
     </div>
 </table><br>
-        <button class="btn btn-success btn-icon-split" type="submit" style="margin-left: 160px">Nhập</button>
+        <button class="btn btn-success btn-icon-split" type="submit" style="margin-left: 160px; width: 60px;">Nhập</button>
     </form>
 
         <!-- <button type="submit" style="margin-left: 30px">Nhập</button>
