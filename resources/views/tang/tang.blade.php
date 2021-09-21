@@ -20,8 +20,8 @@
         <tr>
             <td>{{$item->ID_tang}}</td>
             <td>{{$item->name}}</td>
-            <td><a href="{{url('/updatetang/'.$item->ID_tang)}}">Sửa</a></td>
-            <td><a href="{{url('/deletetang/'.$item->ID_tang)}}">Xoá</a></td>
+            <td><button class="btn btn-primary btn-icon-split"><a class="icon text-white-50" href="{{url('/updatetang/'.$item->ID_tang)}}">Sửa</a></button></td>
+            <td><button class="btn btn-danger  btn-icon-split"><a class="icon text-white-50" href="{{url('/deletetang/'.$item->ID_tang)}}">Xoá</a></button></td>
            
             
         </tr>
