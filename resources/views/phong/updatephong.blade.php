@@ -12,10 +12,11 @@
     @if($phong != NULL)
     <form method="POST">
         @csrf
-        
-        <input value="{{$phong->tenphong}}" type="text" name="tenphong" placeholder="Nhập ten phong">
-        <input value="{{$phong->ID_tang}}" type="text" name="ID_tang" placeholder="Nhập ID_tang">
-        <button type="submit">Cập nhật</button>
+        <table>
+        <tr><td><p><b>Phòng</b></p></td><td><input style="width:390px; margin-left: 20px" value="{{$phong->tenphong}}" type="text" name="tenphong" placeholder="Nhập ten phong"></td></tr>
+        <tr><td><p><b>Tầng</b></p></td><td><input style="width:390px; margin-left: 20px" value="{{$phong->ID_tang}}" type="text" name="ID_tang" placeholder="Nhập ID_tang"></td></tr>
+        </table><br>
+        <button style="margin-left: 160px;" type="submit">Cập nhật</button>
     @else 
         <h1>Ko có dữ liệu</h1>
     @endif
