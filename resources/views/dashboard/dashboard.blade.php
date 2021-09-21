@@ -18,7 +18,7 @@
         </div>
         <div class="card mb-4 py-3 border-left-secondary">
             <div class="card-body">
-                .border-left-secondary
+                {{$demsp->countmt}}
             </div>
         </div>
     </div>

@@ -36,7 +36,8 @@ class AdminController extends Controller
         $demtb = DB::select('SELECT COUNT(`name`) as dem FROM thietbi')[0];
         $dembc = DB::select('SELECT COUNT(`ID_hd`) as dem FROM bienban')[0];
         $demnv = DB::select('SELECT COUNT(`ID_nv`) as dem  from nhanvien  WHERE active="1"')[0];
-        return view('dashboard.dashboard')->with('demtb',$demtb)->with('dembc',$dembc)->with('demnv',$demnv);
+        $demsp = DB::select('SELECT SUM(`soluong`) as countmt from thietbi WHERE ID_loai="2"')[0];
+        return view('dashboard.dashboard')->with('demtb',$demtb)->with('dembc',$dembc)->with('demnv',$demnv)->with('demsp',$demsp);
 
         
     }

@@ -39,7 +39,7 @@
             <td>{{$item->tinhtrang==1?'Ổn định':'Đang bảo trì'}}</td>
             <td>{{$item->ID_phong}}</td>
             <td>{{$item->ID_tang}}</td>
-            <td>{{$item->ID_loai}}</td>
+            <td>{{$item->ten}}</td>
             <td><button class="btn btn-primary btn-icon-split"><a class="icon text-white-50" href="{{url('/updatetrangthietbi/'.$item->ID_tb)}}">Sửa</a></button></td>
             {{-- <td><a href="{{url('/deletetrangthietbi/'.$item->ID_tb)}}">Xoá</a></td> --}}
 

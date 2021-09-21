@@ -55,13 +55,13 @@
 @endforelse
       </select>
     </div>
-<<<<<<< HEAD
+
         <button class="btn btn-success btn-icon-split" type="submit" style="margin-left: 30px">Nhập</button>
     </form>
-=======
-        <button type="submit" style="margin-left: 30px">Nhập</button>
-    </form></table>
->>>>>>> 7a2d50f36852573e613d07a757e725cfeda2ff83
+
+        {{-- <button type="submit" style="margin-left: 30px">Nhập</button>
+    </form> --}}
+</table>
 </body>
 </html>
 
