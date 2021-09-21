@@ -284,6 +284,12 @@ class ToolController extends Controller
         $chart = ToolModel::chart();
         return view('chart.chart',['chart'=>$chart]);
     }
+    function switchstatus($id){
+        $status = DB::table('nhanvien')->where('ID_nv','=',$id)->get()[0];
+        $active=$status->active==0?1:0;
+        DB::update('UPDATE nhanvien SET active = ? WHERE ID_nv=?',[$active,$id]); 
+        return redirect('/test');
+    }
 
 
 }

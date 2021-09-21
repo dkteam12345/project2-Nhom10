@@ -23,7 +23,14 @@
             <td>{{$contact->name}}</td>
             <td>{{$contact->address}}</td>
             <td>{{$contact->phone}}</td>
-            <td>{{$contact->active==1?'Đang hoạt động':'Đã nghỉ việc'}}</td>
+            <td>@if ($contact->active==1 )
+                <a href="{{url('/test/switchstatus/'.$contact->ID_nv)}}" class="btn btn-success btn-circle">
+                    <i class="fas fa-check"></i>
+                </a>
+            @else
+            <a href="{{url('/test/switchstatus/'.$contact->ID_nv)}}" class="btn btn-danger btn-circle"><i class="fas fa-ban"></i></a>
+            @endif
+        </td>
             <td><button class="btn btn-primary btn-icon-split"><a class="icon text-white-50" href="{{url('/edit/'.$contact->ID_nv)}}">Sửa</a></button></td>
           
         </tr>

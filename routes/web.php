@@ -73,3 +73,4 @@ route::post('/createbaocao',[ReportController::class,'createbaocao']);
 route::get('/logout',[AdminController::class,'logout']);
 route::get('/chart',[ToolController::class,'chart']);
 route::get('/dashboard',[AdminController::class,'dashboard']);
+route::get('/test/switchstatus/{id}',[ToolController::class,'switchstatus']);

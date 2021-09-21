@@ -18,6 +18,8 @@ class ToolModel extends Model
 
 
     }
+    protected $table = 'nhanvien';
+    protected $fillable = ['ID_nv','name','address','phone','active'];
     static function createcontact($name,$address,$phone,$active){
         return DB::table('nhanvien')->insert([
             'name'=>$name,
