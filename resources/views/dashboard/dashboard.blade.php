@@ -1,15 +1,14 @@
 @extends('adminlayout')
 @section('dashboard')
     <div>
-<<<<<<< HEAD
+
         <div class="card mb-4 py-3 border-left-primary">
             <div class="card-body">
                <b> Hiện tại đang có {{$demtb->dem}} thiết bị </b>
             </div>
         </div>
-=======
-        
->>>>>>> a66fe5d3f0fe646a71aca30e7e074dc64101718d
+
+
         <div class="card mb-4 py-3 border-left-secondary">
             <div class="card-body">
               <b> Tổng số các bản báo cáo là {{$dembc->dem}}</b>

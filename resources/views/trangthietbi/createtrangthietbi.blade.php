@@ -16,16 +16,16 @@
         
         <tr><td><p><b>Số lượng</b></p></td><td><input style="width:390px;margin-left: 20px " type="text" name="soluong" placeholder="Nhập số lượng"></td></tr>
         
-        <tr><td><p><b>Date</b></p></label></td><td><input style="width:390px;margin-left: 20px " type="date" name="ngaynhap" placeholder="Nhập datetime"></td></tr>
+        <tr><td><p><b>Date</b></p></td><td><input style="width:390px;margin-left: 20px " type="date" name="ngaynhap" placeholder="Nhập datetime"></td></tr>
         
-        <label for="cars">Tình trạng của thiết bị:</label>
+        <tr><td><p><b><label for="cars">Tình trạng của thiết bị:</label></b></p></td><td>
 
-<select name="tinhtrang">
+<select style="width:390px;margin-left: 20px " name="tinhtrang">
   <option value="0">Đang hỏng</option>
   <option value="1">Ổn định</option>
   <option value="2">Đang bảo trì</option>
   
-</select>
+</select></td></tr>
         
         <tr><td><p><b>Tầng</b></p></td><td>
             <select class="form-control" style="width:390px; margin-left: 20px" name="tang" id="">
@@ -62,7 +62,7 @@
 @endforelse
       </select>
     </div>
-
+<br>
 
         <button class="btn btn-success btn-icon-split" type="submit" style="margin-left: 30px">Nhập</button>
     </form>
