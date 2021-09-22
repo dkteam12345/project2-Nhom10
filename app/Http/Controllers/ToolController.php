@@ -139,7 +139,7 @@ class ToolController extends Controller
 
         $trangthietbi = DB::table('thietbi')
         ->join('loaithietbi','loaithietbi.ID_loai','=','thietbi.ID_loai')->join('phong','phong.ID_phong','=','thietbi.ID_phong')->join('tang','tang.ID_tang','=','thietbi.ID_tang')
-        ->select('thietbi.ID_tb','phong.ID_phong','tang.ID_tang','loaithietbi.ID_loai','thietbi.name','thietbi.soluong','thietbi.ngaynhap','thietbi.tinhtrang')
+        ->select('thietbi.ID_tb','loaithietbi.ten','phong.ID_phong','tang.ID_tang','loaithietbi.ID_loai','thietbi.name','thietbi.soluong','thietbi.ngaynhap','thietbi.tinhtrang')
         ->where('name','LIKE','%'.$keyword.'%')
         ->paginate(5);
         return view('trangthietbi.trangthietbi',['trangthietbi'=>$trangthietbi]);
@@ -269,6 +269,7 @@ class ToolController extends Controller
         $ID_loai = $request -> input('ID_loai');
         $ID_phong = $request -> input('ID_phong');
         $ID_tang = $request -> input('ID_tang');
+        
         $rs = ToolModel::updatetrangthietbi($id,$name,$soluong,$ngaynhap,$tinhtrang,$ID_loai,$ID_phong,$ID_tang);
         if ($rs == 0){
             
