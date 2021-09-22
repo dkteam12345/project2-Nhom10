@@ -21,8 +21,8 @@
             <td>{{$item->ID_phong}}</td>
             <td>{{$item->tenphong}}</td>
             <td>{{$item->ID_tang}}</td>
-            <td><a href="{{url('/updatephong/'.$item->ID_phong)}}">Sửa</a></td>
-            <td><a href="{{url('/deletephong/'.$item->ID_phong)}}">Xoá</a></td>
+            <td><button class="btn btn-primary btn-icon-split"><a class="icon text-white-50" href="{{url('/updatephong/'.$item->ID_phong)}}">Sửa</a></button></td>
+            <td><button class="btn btn-danger  btn-icon-split"><a class="icon text-white-50" href="{{url('/deletephong/'.$item->ID_phong)}}">Xoá</a></button></td>
             
         </tr>
         @empty
