@@ -19,7 +19,15 @@
         
         <tr><td><p><b>Date</b></p></label></td><td><input style="width:390px;margin-left: 20px" value="{{$trangthietbi->ngaynhap}}" type="date" name="ngaynhap" placeholder="Nhập datetime"></td></tr>
         
-        <tr><td><p><b>Tình trạng</b></p></label></td><td><input style="width:390px;margin-left: 20px " value="{{$trangthietbi->tinhtrang}}" type="text" name="tinhtrang" placeholder="Nhập tình trạng"></td></tr>
+        
+        <label for="cars">Tình trạng của thiết bị:</label>
+
+<select name="tinhtrang">
+  <option value="0">Đang hỏng</option>
+  <option value="1">Ổn định</option>
+  <option value="2">Đang bảo trì</option>
+  
+</select>
         
         <tr><td><p><b>Loại thiết bị</b></p></td><td>
         <input style="width:390px;margin-left: 20px" value="{{$trangthietbi->ID_loai}}" type="number" name="ID_loai" placeholder="Nhập ID_loai"></td></tr>

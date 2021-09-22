@@ -36,7 +36,7 @@
             <td>{{$item->name}}</td>
             <td>{{$item->soluong}}</td>
             <td>{{$item->ngaynhap}}</td>
-            <td>{{$item->tinhtrang==1?'Ổn định':'Đang bảo trì'}}</td>
+            <td>{{$item->tinhtrang==1?'Ổn định':($item->tinhtrang==0?'Đang bảo trì':'Đang sửa')}}</td>
             <td>{{$item->ID_phong}}</td>
             <td>{{$item->ID_tang}}</td>
             <td>{{$item->ten}}</td>

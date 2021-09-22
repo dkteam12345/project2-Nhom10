@@ -269,6 +269,7 @@ class ToolController extends Controller
         $ID_loai = $request -> input('ID_loai');
         $ID_phong = $request -> input('ID_phong');
         $ID_tang = $request -> input('ID_tang');
+        
         $rs = ToolModel::updatetrangthietbi($id,$name,$soluong,$ngaynhap,$tinhtrang,$ID_loai,$ID_phong,$ID_tang);
         if ($rs == 0){
             
