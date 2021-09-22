@@ -16,7 +16,7 @@
         <tr><td><p><b>Phòng</b></p></td><td><input style="width:390px; margin-left: 20px" value="{{$phong->tenphong}}" type="text" name="tenphong" placeholder="Nhập ten phong"></td></tr>
         <tr><td><p><b>Tầng</b></p></td><td><input style="width:390px; margin-left: 20px" value="{{$phong->ID_tang}}" type="text" name="ID_tang" placeholder="Nhập ID_tang"></td></tr>
         </table><br>
-        <button style="margin-left: 160px;" type="submit">Cập nhật</button>
+        <button class="btn btn-success btn-icon-split" type="submit" style="margin-left: 160px; width: 90px;">Cập nhật</button>
     @else 
         <h1>Ko có dữ liệu</h1>
     @endif

@@ -26,7 +26,7 @@
         <tr><td><p><b>Phòng</b></p></td><td><input style="width:390px;margin-left: 20px" value="{{$trangthietbi->ID_phong}}" type="number" name="ID_phong" placeholder="Nhập ID_phong"></td></tr>
         <tr><td><p><b>Tầng</b></p></td><td><input style="width:390px;margin-left: 20px" value="{{$trangthietbi->ID_tang}}" type="number" name="ID_tang" placeholder="Nhập ID_tang"></td></tr>
 </table><br>
-        <button style="margin-left: 160px;" type="submit">Cập nhật</button>
+<button class="btn btn-success btn-icon-split" type="submit" style="margin-left: 160px; width: 90px;">Cập nhật</button>
     @else 
         <h1>Ko có dữ liệu</h1>
     @endif

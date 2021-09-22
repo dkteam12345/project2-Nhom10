@@ -3,17 +3,17 @@
     <div>
         <div class="card mb-4 py-3 border-left-primary">
             <div class="card-body">
-                Hiện tại đang có {{$demtb->dem}} thiết bị 
+               <b> Hiện tại đang có {{$demtb->dem}} thiết bị </b>
             </div>
         </div>
         <div class="card mb-4 py-3 border-left-secondary">
             <div class="card-body">
-               Tổng số các bản báo cáo là {{$dembc->dem}}
+              <b> Tổng số các bản báo cáo là {{$dembc->dem}}</b>
             </div>
         </div>
         <div class="card mb-4 py-3 border-left-secondary">
             <div class="card-body">
-                Nhân viên ở phòng lab là {{$demnv->dem}} xem danh sách nhân viên  <a href="{{url('/test')}}">ở đây</a>
+               <b> Nhân viên ở phòng lab là {{$demnv->dem}} xem danh sách nhân viên  <a href="{{url('/test')}}">ở đây</a></b>
             </div>
         </div>
         <div class="card mb-4 py-3 border-left-secondary">
