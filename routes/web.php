@@ -74,3 +74,6 @@ route::get('/logout',[AdminController::class,'logout']);
 route::get('/chart',[ToolController::class,'chart']);
 route::get('/dashboard',[AdminController::class,'dashboard']);
 route::get('/test/switchstatus/{id}',[ToolController::class,'switchstatus']);
+Route::get('/dsds',[AdminController::class,'maintance']);
+Route::get('/dsdh',[AdminController::class,'fix']);
+Route::get('/dsod',[AdminController::class,'gtg']);
