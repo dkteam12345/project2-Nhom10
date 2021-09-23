@@ -4,19 +4,22 @@
 
         <div class="card mb-4 py-3 border-left-primary">
             <div class="card-body">
-               <b> Hiện tại đang có {{$demtb->dem}} thiết bị </b>
+                <table>
+            <tr><td><i style="color: blue; font-size: 50px; margin-right: 10px;" class="fas fa-tv"></i></td><td><b> Hiện tại đang có {{$demtb->dem}} thiết bị </b></td></tr></table>
             </div>
         </div>
 
 
         <div class="card mb-4 py-3 border-left-secondary">
             <div class="card-body">
-              <b> Tổng số các bản báo cáo là {{$dembc->dem}}</b>
+                <table>
+            <tr><td><i style="color: blue; font-size: 55px; margin-right: 10px;" class="far fa-chart-bar"></i> <b> Tổng số các bản báo cáo là {{$dembc->dem}}</b></td></tr></table>
             </div>
         </div>
         <div class="card mb-4 py-3 border-left-secondary">
             <div class="card-body">
-               <b> Nhân viên ở phòng lab là {{$demnv->dem}} xem danh sách nhân viên  <a href="{{url('/test')}}">ở đây</a></b>
+                <table>
+            <tr><td><i style="color: blue; font-size: 55px; margin-right: 10px;" class="fas fa-users"></i><b> Nhân viên quản lý phòng lab là {{$demnv->dem}}   <a href="{{url('/test')}}">View</a></b></td></tr></table>
             </div>
         </div> 
         
