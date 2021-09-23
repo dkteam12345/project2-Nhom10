@@ -5,7 +5,7 @@
         <div class="card mb-4 py-3 border-left-primary">
             <div class="card-body">
                 <table>
-            <tr><td><i style="color: blue; font-size: 50px; margin-right: 10px;" class="fas fa-tv"></i></td><td><b> Hiện tại đang có {{$demtb->dem}} thiết bị </b></td></tr></table>
+            <tr><td><i style="color: blue; font-size: 50px; margin-right: 10px;" class="fas fa-tv"></i></td><td><b style="font-size: 40px;margin-left: 50px;"> {{$demtb->dem}} </b><br><b>Tất cả các thiết bị</b> <a href="{{url('/trangthietbi')}}">View</a></td></tr></table>
             </div>
         </div>
 
@@ -13,13 +13,13 @@
         <div class="card mb-4 py-3 border-left-secondary">
             <div class="card-body">
                 <table>
-            <tr><td><i style="color: blue; font-size: 55px; margin-right: 10px;" class="far fa-chart-bar"></i> <b> Tổng số các bản báo cáo là {{$dembc->dem}}</b></td></tr></table>
+            <tr><td><i style="color: blue; font-size: 55px; margin-right: 10px;" class="far fa-chart-bar"></i> </td><td><b style="font-size: 40px;margin-left: 50px;"> {{$dembc->dem}}</b><br><b>Báo cáo thống kê</b>  <a href="{{url('/baocao')}}">View</a></td></tr></table>
             </div>
         </div>
         <div class="card mb-4 py-3 border-left-secondary">
             <div class="card-body">
                 <table>
-            <tr><td><i style="color: blue; font-size: 55px; margin-right: 10px;" class="fas fa-users"></i><b> Nhân viên quản lý phòng lab là {{$demnv->dem}}   <a href="{{url('/test')}}">View</a></b></td></tr></table>
+            <tr><td><i style="color: blue; font-size: 55px; margin-right: 10px;" class="fas fa-users"></i></td><td><b style="font-size: 40px;margin-left: 50px;"> {{$demnv->dem}}</b><br><b>Nhân viên quản lý phòng lab</b>   <a href="{{url('/test')}}">View</a></td></tr></table>
             </div>
         </div> 
         
