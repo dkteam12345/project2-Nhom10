@@ -51,7 +51,7 @@
     </select>
         </table><br>
     
-        <button style="margin-left: 160px;" type="submit">Đăng ký</button>
+        <button  class="btn btn-success btn-icon-split" type="submit" style="margin-left: 160px; width: 60px;">Nhập</button>
     </form>
 </body>
 </html>

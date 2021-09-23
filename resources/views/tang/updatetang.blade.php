@@ -15,7 +15,7 @@
         <table>
         <tr><td><p><b>ID_Nhân viên</b></p></td><td><input style="width:390px; margin-left: 20px" value="{{$tang->ID_nv}}" type="text" name="ID_nv" placeholder="Nhập ID_nv"></td></tr>
         </table><br>
-        <button style="margin-left: 160px;" type="submit">Cập nhật</button>
+        <button class="btn btn-success btn-icon-split" type="submit" style="margin-left: 160px; width: 90px;">Cập nhật</button>
     @else 
         <h1>Ko có dữ liệu</h1>
     @endif

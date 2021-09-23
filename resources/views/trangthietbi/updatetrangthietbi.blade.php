@@ -17,24 +17,24 @@
         
         <tr><td><p><b>Số lượng</b></p></td><td><input style="width:390px;margin-left: 20px" value="{{$trangthietbi->soluong}}" type="text" name="soluong" placeholder="Nhập số lượng"></td></tr>
         
-        <tr><td><p><b>Date</b></p></label></td><td><input style="width:390px;margin-left: 20px" value="{{$trangthietbi->ngaynhap}}" type="date" name="ngaynhap" placeholder="Nhập datetime"></td></tr>
+        <tr><td><p><b>Date</b></p></td><td><input style="width:390px;margin-left: 20px" value="{{$trangthietbi->ngaynhap}}" type="date" name="ngaynhap" placeholder="Nhập datetime"></td></tr>
         
         
-        <label for="cars">Tình trạng của thiết bị:</label>
+        <tr><td><p><b> <label for="cars">Tình trạng của thiết bị:</label></b></p></td><td>
 
-<select name="tinhtrang">
+<select style="width:390px;margin-left: 20px" name="tinhtrang">
   <option value="0">Đang hỏng</option>
   <option value="1">Ổn định</option>
   <option value="2">Đang bảo trì</option>
   
-</select>
+</select></td></tr>
         
         <tr><td><p><b>Loại thiết bị</b></p></td><td>
         <input style="width:390px;margin-left: 20px" value="{{$trangthietbi->ID_loai}}" type="number" name="ID_loai" placeholder="Nhập ID_loai"></td></tr>
         <tr><td><p><b>Phòng</b></p></td><td><input style="width:390px;margin-left: 20px" value="{{$trangthietbi->ID_phong}}" type="number" name="ID_phong" placeholder="Nhập ID_phong"></td></tr>
         <tr><td><p><b>Tầng</b></p></td><td><input style="width:390px;margin-left: 20px" value="{{$trangthietbi->ID_tang}}" type="number" name="ID_tang" placeholder="Nhập ID_tang"></td></tr>
 </table><br>
-        <button style="margin-left: 160px;" type="submit">Cập nhật</button>
+<button class="btn btn-success btn-icon-split" type="submit" style="margin-left: 190px; width: 90px;">Cập nhật</button>
     @else 
         <h1>Ko có dữ liệu</h1>
     @endif
