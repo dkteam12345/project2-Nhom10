@@ -81,7 +81,7 @@
                 <div class="col mr-2">
                     <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
                         Số lượng thiết bị đang sửa chữa xem chi tiết <a class="text-xs font-weight-bold text-danger text-uppercase mb-1" href="{{url('/dsds')}}">ở đây</a></div>
-                    <div class="h5 mb-0 font-weight-bold text-gray-800">{{$demspdanghong->dem}}</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">{{$demspdangsua->dem}}</div>
                 </div>
                 <div class="col-auto">
                     <i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i>

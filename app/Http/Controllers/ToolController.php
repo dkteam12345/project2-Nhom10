@@ -258,7 +258,10 @@ class ToolController extends Controller
 
     function edittrangthietbi($id){
         $trangthietbi = ToolModel::gettrangthietbi($id);
-        return view('trangthietbi.updatetrangthietbi',['trangthietbi'=>$trangthietbi]);
+        $tang = DB::table('tang')->get();
+        $phong = DB::table('phong')->get();
+        $loaithietbi = DB::table('loaithietbi')->get();
+        return view('trangthietbi.updatetrangthietbi',['trangthietbi'=>$trangthietbi,'tang'=>$tang,'phong'=>$phong,'loaithietbi'=>$loaithietbi]);
     }
 
     function updatetrangthietbi(Request $request,$id){

@@ -51,7 +51,7 @@
         </div>
     </select>
     <div class="form-group">
-    <tr><td><p><b>Loại thiết bị</b></p></td><td>
+  <tr><td><p><b>Loại thiết bị</b></p></td><td>
       <select class="form-control" style="width:390px; margin-left: 20px" name="loai" id="">
         @forelse ($thietbi as $item)
             
@@ -60,7 +60,7 @@
 @empty</td></tr>
 
 @endforelse
-      </select>
+      </select>  
     </div>
 <br>
 

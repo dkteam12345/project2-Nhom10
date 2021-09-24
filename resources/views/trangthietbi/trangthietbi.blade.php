@@ -26,9 +26,10 @@
             <td>Số lượng</td>
             <td>Ngày nhập</td>
             <td>Tình trạng</td>
-            <td>Tầng</td>
             <td>Phòng</td>
+            <td>Tầng</td>
             <td>Loại</td>
+            <td>Action</td>
         </tr>
         @forelse ($trangthietbi as $item)
         <tr>
