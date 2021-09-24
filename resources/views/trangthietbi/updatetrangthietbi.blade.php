@@ -53,7 +53,7 @@
         @endforelse
               </select>
             </div>
-        </select>
+        
         <tr><td><p><b>Tầng</b></p></td><td>
             <select class="form-control" style="width:390px; margin-left: 20px" name="tang" id="">
             @forelse ($tang as $item)
@@ -64,6 +64,7 @@
             
             @endforelse
         </select>
+        </table><br>
 <button class="btn btn-success btn-icon-split" type="submit" style="margin-left: 190px; width: 90px;">Cập nhật</button>
     @else 
         <h1>Ko có dữ liệu</h1>
