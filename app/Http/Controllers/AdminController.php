@@ -33,7 +33,7 @@ class AdminController extends Controller
         return redirect('/login');
     }
     function dashboard(){
-        $demtb = DB::select('SELECT COUNT(`name`) as dem FROM thietbi')[0];
+        $demtb = DB::select('SELECT COUNT(`ID_hd`) as dem FROM bienban')[0];
         $dembc = DB::select('SELECT COUNT(`ID_hd`) as dem FROM bienban')[0];
         $demnv = DB::select('SELECT COUNT(`ID_nv`) as dem  from nhanvien  WHERE active="1"')[0];
         

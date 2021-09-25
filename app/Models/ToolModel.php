@@ -116,7 +116,7 @@ class ToolModel extends Model
         return DB::update("UPDATE tang SET ID_nv='$ID_nv' WHERE ID_tang='$id'");
     }
 
-
+    
 
 
 
