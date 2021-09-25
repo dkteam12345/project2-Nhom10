@@ -16,7 +16,7 @@
             <td>Loại</td>
             <td>Tên</td>
             <td>Ghi chú</td>
-            <td>Action</td>
+            <td colspan="2">Action</td>
         </tr>
         @forelse ($thietbi as $item)
         <tr>
@@ -25,7 +25,7 @@
             <td>{{$item->ten}}</td>
             <td>{{$item->ghichu}}</td>
             <td><button class="btn btn-primary btn-icon-split"><a class="icon text-white-50" href="{{url('/updatethietbi/'.$item->ID_loai)}}">Sửa</a></button></td>
-
+            <td><button class="btn btn-danger  btn-icon-split"><a class="icon text-white-50" href="{{url('/deletethietbi/'.$item->ID_loai)}}">Xoá</a></button></td>
         </tr>
         @empty
         <tr>
