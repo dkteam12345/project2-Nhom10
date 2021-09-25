@@ -1,24 +1,23 @@
 @EXTENDS('adminlayout')
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+<div>
     <a href="{{url('/create')}}">Thêm liên hệ</a>
-    <table CLASS="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-        <tr>
-            <td>Name</td>
-            <td>Address</td>
-            <td>Phone</td>
-            <td>Active</td>
-            <td >Action</td>
-        </tr>
-        @forelse ($contacts as $contact)
+    <div class="p-4">
+
+        <title>Document</title>
+    
+        <table class="table" id="datatable">
+            <thead>
+                <tr> 
+                    <td>Name</td>
+                    <td>Address</td>
+                    <td>Phone</td>
+                    <td>Active</td>
+                    <td >Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                @forelse ($contacts as $contact)
         <tr>
             <td>{{$contact->name}}</td>
             <td>{{$contact->address}}</td>
@@ -39,7 +38,14 @@
             <td colspan="6" class="text-center">Danh sách rỗng</td>
         </tr>
         @endforelse
+             
+            </tbody>
+        </table> </div> 
+    <table CLASS="table table-bordered" id="datatable" width="100%" cellspacing="0">
+        <tr>
+           
+        </tr>
+       
     </table>
-</body>
-</html>
+</div>
 @endsection
