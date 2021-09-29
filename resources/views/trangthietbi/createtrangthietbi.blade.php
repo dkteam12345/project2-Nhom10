@@ -16,7 +16,7 @@
         
         <tr><td><p><b>Số lượng</b></p></td><td><input style="width:390px;margin-left: 20px " type="text" name="soluong" placeholder="Nhập số lượng"></td></tr>
         
-        <tr><td><p><b>Date</b></p></td><td><input style="width:390px;margin-left: 20px " type="date" name="ngaynhap" placeholder="Nhập datetime"></td></tr>
+        <tr><td><p><b>Date</b></p></td><td><input style="width:390px;margin-left: 20px " type="datetime-local" name="ngaynhap" placeholder="Nhập datetime"></td></tr>
         
         <tr><td><p><b><label for="cars">Tình trạng của thiết bị:</label></b></p></td><td>
 
@@ -27,16 +27,7 @@
   
 </select></td></tr>
         
-        <tr><td><p><b>Tầng</b></p></td><td>
-            <select class="form-control" style="width:390px; margin-left: 20px" name="tang" id="">
-            @forelse ($tang as $item)
-                
-                    <option value="{{$item->ID_tang}}">{{$item->ID_tang}}</option>
-                    
-            @empty</td></tr>
-            
-            @endforelse
-        </select>
+     
         <div class="form-group">
         <tr><td><p><b>Phòng</b></p></td><td>
           <select class="form-control" style="width:390px; margin-left: 20px" name="phong" id="">

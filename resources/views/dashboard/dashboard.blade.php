@@ -60,7 +60,7 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                            Số lượng thiết bị đang sử dụng là xem chi tiết ở đây <a class="text-xs font-weight-bold text-success text-uppercase mb-1" href="{{url('/dsod')}}">ở đây</a></div>
+                            Số lượng thiết bị đang sử dụng là xem chi tiết <a class="text-xs font-weight-bold text-success text-uppercase mb-1" href="{{url('/dsod')}}">ở đây</a></div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">{{$demspondinh->dem}}</div>
                     </div>
                     <div class="col-auto">

@@ -12,4 +12,6 @@ class AdminModel extends Authenticatable
     use HasFactory;
     protected $table = 'admin';
     protected $fillable = ['gmail','password'];
+
+    
 }

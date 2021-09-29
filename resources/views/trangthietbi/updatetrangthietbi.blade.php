@@ -54,16 +54,6 @@
               </select>
             </div>
         
-        <tr><td><p><b>Tầng</b></p></td><td>
-            <select class="form-control" style="width:390px; margin-left: 20px" name="tang" id="">
-            @forelse ($tang as $item)
-                
-                    <option value="{{$item->ID_tang}}">{{$item->ID_tang}}</option>
-                    
-            @empty</td></tr>
-            
-            @endforelse
-        </select>
         </table><br>
 <button class="btn btn-success btn-icon-split" type="submit" style="margin-left: 190px; width: 90px;">Cập nhật</button>
     @else 

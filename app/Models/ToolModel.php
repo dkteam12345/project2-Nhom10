@@ -78,7 +78,7 @@ class ToolModel extends Model
         
     // }
     static function getallphong(){
-        return DB::select("SELECT tang.ID_tang,tenphong,ID_phong FROM phong INNER JOIN tang ON phong.ID_tang = tang.ID_tang");
+        return DB::table('phong')->join('tang','tang.ID_tang','=','phong.ID_tang')->join('thietbi','thietbi.ID_phong','=','phong.ID_phong')->select('phong.ID_phong','tang.ID_tang',DB::raw("SUM(thietbi.soluong) as soluong"),'phong.tenphong')->groupBy('phong.ID_phong')->get();
     }
 
     static function deletephong($id){
@@ -134,7 +134,7 @@ class ToolModel extends Model
     }
 
     static function deletetrangthietbi($id){
-        return DB::delete("DELETE FROM thietbi WHERE ID_loai='$id'");
+        return DB::delete("DELETE FROM thietbi WHERE ID_tb='$id'");
     }
 
     static function gettrangthietbi($id){
@@ -143,14 +143,14 @@ class ToolModel extends Model
         else return $contacts[0];
     }
 
-    static function updatetrangthietbi($id,$name,$soluong,$ngaynhap,$tinhtrang,$ID_loai,$ID_phong,$ID_tang){
+    static function updatetrangthietbi($id,$name,$soluong,$ngaynhap,$tinhtrang,$ID_loai,$ID_phong){
         
        return DB::update("UPDATE thietbi SET name='$name',soluong='$soluong',
         ngaynhap='$ngaynhap',
         tinhtrang='$tinhtrang',
         ID_loai='$ID_loai',
         ID_phong='$ID_phong', 
-        ID_tang='$ID_tang' WHERE ID_tb='$id'");
+         WHERE ID_tb='$id'");
     }
 
 }

@@ -16,7 +16,13 @@
         <tr><td><p><b>Tên</b></p></td><td> <input style="width:390px; margin-left: 20px" value="{{$contact->name}}" type="text" name="name" placeholder="Nhập họ tên của bạn"></td></tr>
         <tr><td><p><b>Địa chỉ</b></p></td><td> <input style="width:390px; margin-left: 20px" value="{{$contact->address}}" type="text" name="address" placeholder="Nhập số của bạn"></td></tr>
         <tr><td><p><b>Số điện thoại</b></p></td><td> <input style="width:390px; margin-left: 20px" value="{{$contact->phone}}" type="text" name="phone" placeholder="Nhập sđt"></td></tr>
-        <tr><td><p><b>Active</b></p></td><td> <input style="width:390px; margin-left: 20px" value="{{$contact->active}}" type="text" name="active" placeholder="Nhập active"></td></tr>
+        <label for="">Tình trạng hoạt động</label>
+        <select style="width:390px;margin-left: 20px " name="active">
+            <option value="0">Đang nghỉ</option>
+            <option value="1">Đang hoạt động</option>
+            
+            
+          </select></td></tr>
         </table><br>
         <button class="btn btn-success btn-icon-split" type="submit" style="margin-left: 160px; width: 90px;">Cập nhật</button>
     @else 

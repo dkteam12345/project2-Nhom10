@@ -138,8 +138,8 @@ class ToolController extends Controller
         // return view('trangthietbi.trangthietbi',['trangthietbi'=>$trangthietbi]);
 
         $trangthietbi = DB::table('thietbi')
-        ->join('loaithietbi','loaithietbi.ID_loai','=','thietbi.ID_loai')->join('phong','phong.ID_phong','=','thietbi.ID_phong')->join('tang','tang.ID_tang','=','thietbi.ID_tang')
-        ->select('thietbi.ID_tb','loaithietbi.ten','phong.ID_phong','tang.ID_tang','loaithietbi.ID_loai','thietbi.name','thietbi.soluong','thietbi.ngaynhap','thietbi.tinhtrang')
+        ->join('loaithietbi','loaithietbi.ID_loai','=','thietbi.ID_loai')->join('phong','phong.ID_phong','=','thietbi.ID_phong')
+        ->select('thietbi.ID_tb','loaithietbi.ten','phong.ID_phong','loaithietbi.ID_loai','thietbi.name','thietbi.soluong','thietbi.ngaynhap','thietbi.tinhtrang')
         ->where('name','LIKE','%'.$keyword.'%')
         ->paginate();
         return view('trangthietbi.trangthietbi',['trangthietbi'=>$trangthietbi]);
@@ -271,12 +271,12 @@ class ToolController extends Controller
         $tinhtrang = $request -> input('tinhtrang');
         $ID_loai = $request -> input('ID_loai');
         $ID_phong = $request -> input('ID_phong');
-        $ID_tang = $request -> input('ID_tang');
         
-        $rs = ToolModel::updatetrangthietbi($id,$name,$soluong,$ngaynhap,$tinhtrang,$ID_loai,$ID_phong,$ID_tang);
+        
+        $rs = ToolModel::updatetrangthietbi($id,$name,$soluong,$ngaynhap,$tinhtrang,$ID_loai,$ID_phong);
         if ($rs == 0){
             
-            return "sai r em";
+            return redirect('/404');
 
 
         }

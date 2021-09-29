@@ -58,7 +58,9 @@ class AdminController extends Controller
         $demspod = DB::select('SELECT loaithietbi.loai,SUM(soluong) as dem,thietbi.ID_loai FROM thietbi INNER JOIN loaithietbi ON loaithietbi.ID_loai = thietbi.ID_loai WHERE tinhtrang="1" GROUP BY loaithietbi.ID_loai');
         return view('/dsspondinh.dsod')->with('demspod',$demspod);
     }
-    
+    function error(){
+        return view('/404.404');
+    }
     
     
 }

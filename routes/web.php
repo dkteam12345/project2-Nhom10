@@ -77,3 +77,5 @@ route::get('/test/switchstatus/{id}',[ToolController::class,'switchstatus']);
 Route::get('/dsds',[AdminController::class,'maintance']);
 Route::get('/dsdh',[AdminController::class,'fix']);
 Route::get('/dsod',[AdminController::class,'gtg']);
+route::get('/404',[AdminController::class,'error']);
+route::get('/phongdetail/{id}',[AdminController::class,'detail']);
