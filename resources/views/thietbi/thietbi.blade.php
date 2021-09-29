@@ -1,7 +1,7 @@
 @EXTENDS('adminlayout')
 @section('content')
-<div class="p-4">
-    <a href="{{url('/createthietbi')}}">Thêm loại thiết bị</a>
+
+
     <div class="p-4">
         <table class="table" id='datatable'>
             <thead>
