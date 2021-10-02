@@ -36,8 +36,8 @@ class AdminController extends Controller
         $demtb = DB::select('SELECT COUNT(`ID_hd`) as dem FROM bienban')[0];
         $dembc = DB::select('SELECT COUNT(`ID_hd`) as dem FROM bienban')[0];
         $demnv = DB::select('SELECT COUNT(`ID_nv`) as dem  from nhanvien  WHERE active="1"')[0];
-        $barchart = DB::table('thietbi')->join('phong','phong.ID_phong','=','thietbi.ID_phong')->join('loaithietbi','loaithietbi.ID_loai','=','thietbi.ID_loai')->select('loaithietbi.loai as loai','thietbi.soluong as dem','phong.ID_phong as room')->get();
-        // $barchart = DB::select('SELECT COUNT(`ID_loai`) as dem,thietbi.soluong,loaithietbi.ID_loai');
+        // $barchart = DB::table('thietbi')->join('phong','phong.ID_phong','=','thietbi.ID_phong')->join('loaithietbi','loaithietbi.ID_loai','=','thietbi.ID_loai')->select('loaithietbi.loai as loai','thietbi.soluong as dem','phong.ID_phong as room')->get();
+        $barchart = DB::select('SELECT loaithietbi.loai,SUM(thietbi.soluong) as dem,loaithietbi.ID_loai FROM thietbi JOIN loaithietbi ON loaithietbi.ID_loai = thietbi.ID_loai GROUP BY ID_loai');
         
         $demspondinh = DB::select('SELECT SUM(soluong) as dem FROM thietbi WHERE tinhtrang="1"')[0]; 
         $demspdanghong = DB::select('SELECT SUM(soluong) as dem FROM thietbi WHERE tinhtrang="0"')[0]; 
