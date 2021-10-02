@@ -1,31 +1,36 @@
 @extends('adminlayout')
 @section('dashboard')
-<style type="text/css">
-.columns{
-            float: left;
-            width: 90%;
-            padding: 10px;
-        }
-        .columns:nth-child(even){
-            margin-left: 1%;
-        }
-</style>
-<div class="container-fluid">
-    <div class='row'>
-    <div class="col" style="grid-template-columns: 10fr 10fr;display: grid">
-    @foreach ($demspod as $item)
-        <div class="card mb-4 py-3 border-bottom-success columns">
-            <div class="card-body">
-                {{$item->loai}} {{$item->dem}} {{$item->phong}}
-            </div>
-</div>
-@endforeach
-</div>
-</div>
-</div>
 
-<div class="col-lg-6">
 
+<div class="p-4">
+
+    <title>Document</title>
+
+    <table class="table" id="datatable">
+        <thead>
+            <tr>
+                <td>Loại thiết bị</td>
+                <td>Số lượng</td>
+                <td>Phòng</td>
+            </tr>
+        </thead>
+        <tbody>
+           @forelse ($demspod as $item) 
+           <tr>
+                
+                
+                <td>{{$item->loai}}</td>
+                <td>{{$item->dem}} </td>
+                <td>{{$item->phong}}</td>
+            </tr>
+            @empty
+            <tr>
+                <td colspan="2" class="text-center">Danh sách rỗng</td>
+            </tr>
+            @endforelse
+         
+        </tbody>
+    </table> </div> 
     
    
 @endsection
