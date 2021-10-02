@@ -93,9 +93,50 @@
 
             
 
-       
-    </div>
-    <div>
+      
+    
+    <div class="row" style="width:100%;height:75%">
+        
+            <canvas id="barchart"></canvas>
         
     </div>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script>
+        var ctx = document.getElementById("barchart");
+        new Chart(document.getElementById("barchart"), {
+    type: 'bar',
+    data: {
+      labels: [
+          <?php
+            foreach($barchart as $item)
+            {
+                echo "'".$item->loai."',";
+            }
+          ?>
+      ],
+      datasets: [
+        {
+          label: "Số lượng",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+          data: [
+            <?php
+            foreach($barchart as $item)
+            {
+                echo $item->dem.",";
+            }
+          ?>
+          ]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Số lượng thiết bị'
+      }
+    }
+});
+  </script>
+  </div>
 @endsection

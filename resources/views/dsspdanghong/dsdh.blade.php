@@ -16,7 +16,7 @@
     @foreach ($demspdh as $item)
         <div class="card mb-4 py-3 border-bottom-warning columns">
             <div class="card-body">
-                {{$item->loai}} {{$item->dem}}
+                {{$item->loai}} {{$item->dem}} {{$item->phong}}
             </div>
 </div>
 @endforeach

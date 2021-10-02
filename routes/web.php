@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ListController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ToolController;
 use App\Models\Report;
@@ -79,3 +80,6 @@ Route::get('/dsdh',[AdminController::class,'fix']);
 Route::get('/dsod',[AdminController::class,'gtg']);
 route::get('/404',[AdminController::class,'error']);
 route::get('/phongdetail/{id}',[AdminController::class,'detail']);
+route::Get('/updatebaocao/{id}',[ReportController::class,'editbaocao']);
+route::get('/updatebaocao/{id}',[ReportController::class,'updatebaocao']);
+route::get('/danhsach/{id}',[ListController::class,'danhsach']);

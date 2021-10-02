@@ -51,10 +51,10 @@ class ToolModel extends Model
         return DB::select("SELECT * FROM loaithietbi");
         
     }
-    static function createthietbi($loai,$ten,$ghichu){
+    static function createthietbi($loai,$ghichu){
         return DB::table('loaithietbi')->insert([
             'loai'=>$loai,
-            'ten'=>$ten,
+            
             'ghichu'=>$ghichu,
             
         ]);
@@ -67,8 +67,8 @@ class ToolModel extends Model
         if(count($contacts) == 0) return NULL;
         else return $contacts[0];
     }
-    static function updatethietbi($id,$loai,$ten,$ghichu){
-        return DB::update("UPDATE loaithietbi SET loai='$loai',ten='$ten',ghichu='$ghichu' WHERE ID_loai='$id'");
+    static function updatethietbi($id,$loai,$ghichu){
+        return DB::update("UPDATE loaithietbi SET loai='$loai',ghichu='$ghichu' WHERE ID_loai='$id'");
     }
  
     
@@ -120,7 +120,7 @@ class ToolModel extends Model
 
 
 
-    static function createtrangthietbi($name,$soluong,$ngaynhap,$tinhtrang,$id_loai,$id_phong,$id_tang){
+    static function createtrangthietbi($name,$soluong,$ngaynhap,$tinhtrang,$id_loai,$id_phong){
         return DB::table('thietbi')->insert([
             'name'=>$name,
             'soluong'=>$soluong,
@@ -128,7 +128,7 @@ class ToolModel extends Model
             'tinhtrang'=>$tinhtrang,
             'ID_loai'=>$id_loai,
             'ID_phong'=>$id_phong, 
-            'ID_tang'=>$id_tang,
+            
             
         ]);
     }
@@ -149,7 +149,7 @@ class ToolModel extends Model
         ngaynhap='$ngaynhap',
         tinhtrang='$tinhtrang',
         ID_loai='$ID_loai',
-        ID_phong='$ID_phong', 
+        ID_phong='$ID_phong' 
          WHERE ID_tb='$id'");
     }
 

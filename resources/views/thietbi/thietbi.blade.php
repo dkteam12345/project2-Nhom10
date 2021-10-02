@@ -3,11 +3,13 @@
 
 
     <div class="p-4">
+        <a href="{{url('/createthietbi')}}">Thêm loại thiết bị</a>
         <table class="table" id='datatable'>
+            
             <thead>
                 <tr>
                     <td>Loại</td>
-                    <td>Tên</td>
+                    
                     <td>Ghi chú</td>
                     <td>Action</td>
                 </tr>
@@ -17,7 +19,7 @@
                 <tr>
                     
                     <td>{{$item->loai}}</td>
-                    <td>{{$item->ten}}</td>
+                   
                     <td>{{$item->ghichu}}</td>
                     <td><button class="btn btn-primary btn-icon-split"><a class="icon text-white-50" href="{{url('/updatethietbi/'.$item->ID_loai)}}">Sửa</a></button></td>
         

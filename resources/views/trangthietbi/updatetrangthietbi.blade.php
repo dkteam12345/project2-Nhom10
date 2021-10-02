@@ -17,7 +17,7 @@
         
         <tr><td><p><b>Số lượng</b></p></td><td><input style="width:390px;margin-left: 20px" value="{{$trangthietbi->soluong}}" type="text" name="soluong" placeholder="Nhập số lượng"></td></tr>
         
-        <tr><td><p><b>Date</b></p></td><td><input style="width:390px;margin-left: 20px" value="{{$trangthietbi->ngaynhap}}" type="date" name="ngaynhap" placeholder="Nhập datetime"></td></tr>
+        <tr><td><p><b>Date</b></p></td><td><input style="width:390px;margin-left: 20px" value="{{$trangthietbi->ngaynhap}}" type="datetime-local" name="ngaynhap" placeholder="Nhập datetime"></td></tr>
         
         
         <tr><td><p><b> <label for="cars">Tình trạng của thiết bị:</label></b></p></td><td>
@@ -31,10 +31,10 @@
         
 <div class="form-group">
     <tr><td><p><b>Loại thiết bị</b></p></td><td>
-        <select class="form-control" style="width:390px; margin-left: 20px" name="loai" id="">
+        <select class="form-control" style="width:390px; margin-left: 20px" name="ID_loai" id="">
           @forelse ($loaithietbi as $item)
               
-          <option value="{{$item->ID_loai}}">{{$item->ten}}</option>
+          <option value="{{$item->ID_loai}}">{{$item->loai}}</option>
           
   @empty</td></tr>
   
@@ -43,7 +43,7 @@
       </div>
         <div class="form-group">
             <tr><td><p><b>Phòng</b></p></td><td>
-              <select class="form-control" style="width:390px; margin-left: 20px" name="phong" id="">
+              <select class="form-control" style="width:390px; margin-left: 20px" name="ID_phong" id="">
                 @forelse ($phong as $item)
                     
                 <option value="{{$item->ID_phong}}">{{$item->ID_phong}}</option>

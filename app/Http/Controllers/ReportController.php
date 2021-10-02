@@ -35,4 +35,11 @@ class ReportController extends Controller
         }
 
     }
+    function getbaocao($id){
+        $baocao = ToolModel::getbaocao($id);
+        return view('baocaocuanhanvien.updatebaocao',['bienban'=>$baocao]);
+    }
+    function updatebaocao(Request $request,$id){
+        
+    }
 }

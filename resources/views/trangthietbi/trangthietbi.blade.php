@@ -76,7 +76,7 @@
                     <td>{{$item->tinhtrang==1?'Ổn định':($item->tinhtrang==0?'Đang bảo trì':'Đang sửa')}}</td>
                     <td>{{$item->ID_phong}}</td>
                     
-                    <td>{{$item->ten}}</td>
+                    <td>{{$item->loai}}</td>
                     <td><button class="btn btn-primary btn-icon-split"><a class="icon text-white-50" href="{{url('/updatetrangthietbi/'.$item->ID_tb)}}">Sửa</a></button></td>
                     <td><button class="btn btn-danger btn-icon-split"><a class="icon text-white-50" href="{{url('/deletetrangthietbi/'.$item->ID_tb)}}">Xoá</a></button></td>
         

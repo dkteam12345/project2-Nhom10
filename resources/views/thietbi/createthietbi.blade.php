@@ -19,7 +19,7 @@
 ======= --}}
         <table>
        <tr><td><p><b>Loại</b></p></td><td> <input style="width:390px; margin-left: 20px" type="text" name="loai" placeholder="Nhập loại"></td></tr>
-       <tr><td><p><b>Tên</b></p></td><td>  <input style="width:390px; margin-left: 20px" type="text" name="ten" placeholder="Nhập tên"></td></tr>
+
        <tr><td><p><b>Ghi chú</b></p></td><td>  <input style="width:390px; margin-left: 20px" type="text" name="ghichu" placeholder="Ghi chú"></td></tr>
         </table><br>
         <button class="btn btn-success btn-icon-split" type="submit" style="margin-left: 160px; width: 60px;">Nhập</button>

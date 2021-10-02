@@ -12,11 +12,11 @@
     <form method="POST">
         @csrf
         
-        <tr><td><p><b>Tên</b></p></td><td><input style="width:390px;margin-left: 20px" type="text" name="name" placeholder="Nhập tên"></td></tr>
+        <tr><td><p><b>Tên</b></p></td><td><input style="width:390px;margin-left: 20px" type="text" name="name" placeholder="Nhập tên" required></td></tr>
         
-        <tr><td><p><b>Số lượng</b></p></td><td><input style="width:390px;margin-left: 20px " type="text" name="soluong" placeholder="Nhập số lượng"></td></tr>
+        <tr><td><p><b>Số lượng</b></p></td><td><input style="width:390px;margin-left: 20px " type="text" name="soluong" placeholder="Nhập số lượng" required></td></tr>
         
-        <tr><td><p><b>Date</b></p></td><td><input style="width:390px;margin-left: 20px " type="datetime-local" name="ngaynhap" placeholder="Nhập datetime"></td></tr>
+        <tr><td><p><b>Date</b></p></td><td><input style="width:390px;margin-left: 20px " type="datetime-local" name="ngaynhap" placeholder="Nhập datetime" required></td></tr>
         
         <tr><td><p><b><label for="cars">Tình trạng của thiết bị:</label></b></p></td><td>
 
@@ -46,7 +46,7 @@
       <select class="form-control" style="width:390px; margin-left: 20px" name="loai" id="">
         @forelse ($thietbi as $item)
             
-        <option value="{{$item->ID_loai}}">{{$item->ten}}</option>
+        <option required value="{{$item->ID_loai}}">{{$item->loai}}</option>
         
 @empty</td></tr>
 

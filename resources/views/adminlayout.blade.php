@@ -469,6 +469,7 @@
             $('#datatable').DataTable();
         });
     </script>
+     <script src="{{asset('vendor/chart.js/Chart.min.js')}}"></script>
 
 </body>
 

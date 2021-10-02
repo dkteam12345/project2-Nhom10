@@ -91,9 +91,9 @@ class ToolController extends Controller
         }
     function createthietbi(Request $request){
         $loai = $request -> input('loai');
-        $ten = $request -> input('ten');
+       
         $ghichu = $request -> input('ghichu');
-        $rs = ToolModel::createthietbi($loai,$ten,$ghichu);
+        $rs = ToolModel::createthietbi($loai,$ghichu);
         if($rs == 0){
             
             return "fail";
@@ -119,9 +119,9 @@ class ToolController extends Controller
     }
     function updatethietbi(Request $request,$id){
         $loai = $request -> input('loai');
-        $ten = $request -> input('ten');
+        
         $ghichu = $request -> input('ghichu');
-        $rs = ToolModel::updatethietbi($id,$loai,$ten,$ghichu);
+        $rs = ToolModel::updatethietbi($id,$loai,$ghichu);
         if ($rs == 0){
             return "fail";
 
@@ -139,7 +139,7 @@ class ToolController extends Controller
 
         $trangthietbi = DB::table('thietbi')
         ->join('loaithietbi','loaithietbi.ID_loai','=','thietbi.ID_loai')->join('phong','phong.ID_phong','=','thietbi.ID_phong')
-        ->select('thietbi.ID_tb','loaithietbi.ten','phong.ID_phong','loaithietbi.ID_loai','thietbi.name','thietbi.soluong','thietbi.ngaynhap','thietbi.tinhtrang')
+        ->select('thietbi.ID_tb','phong.ID_phong','loaithietbi.loai','loaithietbi.ID_loai','thietbi.name','thietbi.soluong','thietbi.ngaynhap','thietbi.tinhtrang')
         ->where('name','LIKE','%'.$keyword.'%')
         ->paginate();
         return view('trangthietbi.trangthietbi',['trangthietbi'=>$trangthietbi]);
@@ -258,10 +258,10 @@ class ToolController extends Controller
 
     function edittrangthietbi($id){
         $trangthietbi = ToolModel::gettrangthietbi($id);
-        $tang = DB::table('tang')->get();
+       
         $phong = DB::table('phong')->get();
         $loaithietbi = DB::table('loaithietbi')->get();
-        return view('trangthietbi.updatetrangthietbi',['trangthietbi'=>$trangthietbi,'tang'=>$tang,'phong'=>$phong,'loaithietbi'=>$loaithietbi]);
+        return view('trangthietbi.updatetrangthietbi',['trangthietbi'=>$trangthietbi,'phong'=>$phong,'loaithietbi'=>$loaithietbi]);
     }
 
     function updatetrangthietbi(Request $request,$id){
@@ -271,6 +271,8 @@ class ToolController extends Controller
         $tinhtrang = $request -> input('tinhtrang');
         $ID_loai = $request -> input('ID_loai');
         $ID_phong = $request -> input('ID_phong');
+        
+        
         
         
         $rs = ToolModel::updatetrangthietbi($id,$name,$soluong,$ngaynhap,$tinhtrang,$ID_loai,$ID_phong);
