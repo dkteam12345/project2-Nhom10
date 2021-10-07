@@ -2,7 +2,19 @@
 <html lang="en">
 
 <head>
-
+    <script type="text/javascript">
+        function check(){
+            var gmail = document.getElementById("gmail").value;
+            var password = document.getElementById("password").value;
+            
+            if (gmail == "" || password == ""  ){
+                alert('Xin hãy nhập gmail và password');
+                return false;
+            }else{
+                return true;
+            }
+        }
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,7 +31,8 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
+   
+    
 </head>
 
 <body class="bg-gradient-primary">
@@ -41,16 +54,16 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
-                                    <form method="POST" class="user">
+                                    <form method="POST" onsubmit="return check()" class="user">
                                         @csrf
                                         <div class="form-group">
-                                            <input type="email" name="gmail" class="form-control form-control-user"
+                                            <input type="email" id="gmail" name="gmail" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address..." required>
+                                                placeholder="Enter Email Address..." >
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" name="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password" required>
+                                            <input type="password" id="password" name="password" class="form-control form-control-user"
+                                                id="exampleInputPassword" placeholder="Password" >
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
