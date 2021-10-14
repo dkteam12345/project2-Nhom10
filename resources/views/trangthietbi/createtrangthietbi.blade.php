@@ -1,26 +1,32 @@
 @EXTENDS('adminlayout')
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body><table>
-    <form method="POST">
+<div class="form-group">
+  <script type="text/javascript">
+    function check(){
+        var name = document.getElementById("name").value;
+        var soluong = document.getElementById("soluong").value;
+        var ngaynhap = document.getElementById("ngaynhap").value;
+        if (name == "" || soluong == "" || ngaynhap == "" ){
+            alert('Xin hãy nhập đầy đủ thông tin');
+            return false;
+        }else{
+            return true;
+        }
+    }
+</script>
+    <table>
+    <form method="POST" onsubmit="return check()">
         @csrf
         
-        <tr><td><p><b>Tên</b></p></td><td><input style="width:390px;margin-left: 20px" type="text" name="name" placeholder="Nhập tên" required></td></tr>
+        <tr><td><p><b>Tên</b></p></td><td><input style="width:390px;margin-left: 20px" id="name" type="text" name="name" placeholder="Nhập tên" ></td></tr>
         
-        <tr><td><p><b>Số lượng</b></p></td><td><input style="width:390px;margin-left: 20px " type="text" name="soluong" placeholder="Nhập số lượng" required></td></tr>
+        <tr><td><p><b>Số lượng</b></p></td><td><input style="width:390px;margin-left: 20px " id="soluong" type="text" name="soluong" placeholder="Nhập số lượng" ></td></tr>
         
-        <tr><td><p><b>Date</b></p></td><td><input style="width:390px;margin-left: 20px " type="datetime-local" name="ngaynhap" placeholder="Nhập datetime" required></td></tr>
+        <tr><td><p><b>Date</b></p></td><td><input style="width:390px;margin-left: 20px " id="ngaynhap" type="datetime-local" name="ngaynhap" placeholder="Nhập datetime"></td></tr>
         
         <tr><td><p><b><label for="cars">Tình trạng của thiết bị:</label></b></p></td><td>
 
-<select style="width:390px;margin-left: 20px " name="tinhtrang">
+<select  style="width:390px;margin-left: 20px " name="tinhtrang">
   <option value="0">Đang hỏng</option>
   <option value="1">Ổn định</option>
   <option value="2">Đang bảo trì</option>
@@ -62,8 +68,7 @@
     </form> --}}
 </table>
 
-</body>
-</html>
 
 
+</div>
 @endsection

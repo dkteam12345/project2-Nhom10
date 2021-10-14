@@ -1,16 +1,20 @@
 @EXTENDS('adminlayout')
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<script type="text/javascript">
+    function check(){
+        var phone = document.getElementById("phone").value;
+        var address = document.getElementById("address").value;
+        var name = document.getElementById("name").value;
+        if (phone == "" || address == "" || name=="" ){
+            alert('Xin hãy nhập đầy đủ thông tin');
+            return false;
+        }else{
+            return true;
+        }
+    }
+</script>
     @if($contact != NULL)
-    <form method="POST">
+    <form method="POST" onsubmit="return check()">
         @csrf
         <table>
         <tr><td><p><b>Tên</b></p></td><td> <input style="width:390px; margin-left: 20px" value="{{$contact->name}}" type="text" name="name" placeholder="Nhập họ tên của bạn"></td></tr>
@@ -29,6 +33,5 @@
         <h1>Ko có dữ liệu</h1>
     @endif
     </form>
-</body>
-</html>
+
 @endsection

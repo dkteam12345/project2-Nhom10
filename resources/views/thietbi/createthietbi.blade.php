@@ -1,15 +1,20 @@
 @EXTENDS('adminlayout')
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Loại thiết bị</title>
-</head>
-<body>
-    <form method="POST">
+<script type="text/javascript">
+    function check(){
+        var loai = document.getElementById("loai").value;
+        var ghichu = document.getElementById("ghichu").value;
+        
+        if (loai == "" || ghichu == ""  ){
+            alert('Xin hãy nhập đầy đủ thông tin');
+            return false;
+        }else{
+            return true;
+        }
+    }
+</script>
+<div class="form-group">
+    <form method="POST" onsubmit="return check()">
         @csrf
 {{-- <<<<<<< HEAD
        Loại <input type="text" name="loai" placeholder="Nhập loại">
@@ -18,16 +23,15 @@
        <button class="btn btn-success btn-icon-split" type="submit" style="margin-left: 30px">Nhập</button>
 ======= --}}
         <table>
-       <tr><td><p><b>Loại</b></p></td><td> <input style="width:390px; margin-left: 20px" type="text" name="loai" placeholder="Nhập loại"></td></tr>
+       <tr><td><p><b>Loại</b></p></td><td> <input style="width:390px; margin-left: 20px" id="loai" type="text" name="loai" placeholder="Nhập loại"></td></tr>
 
-       <tr><td><p><b>Ghi chú</b></p></td><td>  <input style="width:390px; margin-left: 20px" type="text" name="ghichu" placeholder="Ghi chú"></td></tr>
+       <tr><td><p><b>Ghi chú</b></p></td><td>  <input style="width:390px; margin-left: 20px" type="text" id="ghichu" name="ghichu" placeholder="Ghi chú"></td></tr>
         </table><br>
         <button class="btn btn-success btn-icon-split" type="submit" style="margin-left: 160px; width: 60px;">Nhập</button>
 
         
     </form>
-</body>
-</html>
 
+</div>
 
 @endsection
